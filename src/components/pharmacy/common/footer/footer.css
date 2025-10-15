@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.comit {
+    background: rgb(250, 204, 120);
+    height: 143px;
+    width: 100%;
+}
+
+.comits {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 33px;
+}
+
+.comits>div {
+    display: flex;
+    flex-direction: column;
+    /* icon ở trên, chữ ở dưới */
+    align-items: center;
+    /* căn giữa ngang */
+    text-align: center;
+    /* chữ ở giữa */
+}
+
+.comits img {
+    width: 54px;
+    height: 54px;
+    margin-bottom: 8px;
+}
+
+.comit .comits span {
+    font-size: 20px;
+    margin: 0;
+    font-weight: 650;
+}
+
+.info {
+    margin-left: 25px;
+    margin-bottom: 130px;
+}
+
+.info h1 {
+    margin-bottom: 6px;
+    font-size: 25px;
+    color: rgb(255, 128, 0);
+}
+
+.company-pharmacy h1 {
+    margin-bottom: 2px;
+    font-size: 15px;
+    color: black;
+    font-weight: normal;
+}
+
+.company-pharmacy p {
+    margin-bottom: 2px;
+    font-size: 15px;
+    gap: 2px;
+}
+
+.sub-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 25px;
+    margin-top: 10px;
+}
+
+.intro {
+    margin-right: 250px;
+    font-size: 14px;
+    margin-bottom: 65px;
+}
+
+.intro h1 {
+    font-size: 16px;
+    margin-bottom: 7px;
+}
+
+.sub-section span {
+    display: block;
+    padding: 2px 0;
+}
+
+.product-catalog {
+    margin-bottom: 130px;
+    font-size: 14px;
+    margin-right: 200px;
+}
+
+.product-catalog h1 {
+    font-size: 16px;
+    margin-bottom: 4px;
+    font-weight: bold;
+}
+
+.product-catalog span {
+    display: block;
+    padding: 2px 0;
+    margin-bottom: 2px;
+}
+
+.connect {
+    margin-bottom: 172px;
+    margin-right: 30px;
+}
+
+.icon-app {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 55px;
+}
+
+.connect h1 {
+    font-size: 18px;
+    margin-bottom: 7px;
+    font-weight: bold;
+}
+
+.connect span {
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    font-size: 14px;
+    margin-right: 2px;
+}
+
+.footer-bottom {
+    background-color: rgb(250, 204, 120);
+    text-align: center;
+    padding: 8px 0;
+}
+
+.footer-bottom h1 {
+    font-size: 14px;
+    font-weight: normal;
+    margin-bottom: 5px;
+}
+
+.footer-bottom span {
+    font-size: 14px;
+    font-weight: normal;
+}
