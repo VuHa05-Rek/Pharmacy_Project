@@ -4,7 +4,7 @@ import React from 'react';
 import { Box, Container } from '@mui/material';
 import { PharmacyHeader } from './common/header';
 import { PharmacyFooter } from './common/footer';
-import { ProductContent } from './home/product-content';
+import { ProductShowcase } from './home/product-content';
 import { BestSeller } from './home/best-seller';
 
 // ----------------------------------------------------------------------
@@ -13,7 +13,7 @@ export function PharmacyView() {
   console.log({
     PharmacyHeader,
     PharmacyFooter,
-    ProductContent,
+    ProductShowcase,
     BestSeller
   });
   
@@ -23,7 +23,7 @@ export function PharmacyView() {
       
       <Box component="main" sx={{ flexGrow: 1 }}>
         <Container maxWidth="lg">
-          <ProductContent />
+          <ProductShowcase />
           <BestSeller />
         </Container>
       </Box>

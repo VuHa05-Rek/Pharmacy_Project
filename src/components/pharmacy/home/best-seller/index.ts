@@ -1,2 +1,2 @@
-export * from './best-seller';
+export { default as BestSeller } from './best-seller';
 

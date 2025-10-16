@@ -1,0 +1,106 @@
+.container-content {
+    margin: 0;
+    padding: 0;
+}
+
+.container-content img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+}
+
+.slogan {
+    text-align: center;
+    margin-top: -4px;
+    border-top: 1px solid rgb(223, 147, 71);
+}
+
+.slogan img {
+    padding-bottom: 10px;
+}
+
+.name-bestseller img {
+    width: 24px;
+    height: 24px;
+}
+
+.all-product {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.product-bestseller {
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    padding: 16px;
+    max-width: 280px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.product-bestseller:hover {
+    transform: translateY(-1.5px);
+}
+
+.name-bestseller {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.name-bestseller p {
+    font-weight: bold;
+    font-size: 16px;
+    color: #333;
+}
+
+.list-bestseller {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.list-bestseller img {
+    width: 120px;
+    height: auto;
+    margin-bottom: 12px;
+}
+
+.info-medicine {
+    margin-bottom: 10px;
+}
+
+.info-medicine p {
+    font-size: 14px;
+    font-weight: 500;
+    color: #444;
+    margin-bottom: 6px;
+}
+
+.info-medicine span {
+    font-size: 14px;
+    font-weight: bold;
+    color: #e53935;
+    /* đỏ nổi bật giá */
+}
+
+.add-to-cart {
+    padding: 8px 14px;
+    font-size: 14px;
+    font-weight: 600;
+    background-color: #f1c256;
+    /* xanh lá */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s ease-in-out;
+}
+
+.add-to-cart:hover {
+    background-color: #da8c1f;
+}

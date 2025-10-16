@@ -1,161 +1,55 @@
 'use client';
 
 import React from 'react';
-import {
-  Box,
-  Typography,
-  Grid,
-  Card,
-  CardMedia,
-  CardContent,
-  Button,
-  Chip,
-  Rating,
-  Stack,
-} from '@mui/material';
+import Image from 'next/image';
+import { StaticImageData } from 'next/image';
+import './best-seller.css';
+import { ProductContent } from '../product-content/product-content';
+import Medicine from '../../assets/medicine.png';
 
-// ----------------------------------------------------------------------
+interface Product {
+  id: number;
+  image: StaticImageData;
+  title: string;
+  price: string;
+}
 
-const bestSellerProducts = [
-  {
-    id: 1,
-    name: 'Premium Omega-3',
-    price: '$34.99',
-    originalPrice: '$44.99',
-    image: '/assets/images/mock/product-5.webp',
-    rating: 4.9,
-    reviews: 245,
-    badge: 'Best Seller',
-    discount: '22%',
-  },
-  {
-    id: 2,
-    name: 'Vitamin C Complex',
-    price: '$18.99',
-    originalPrice: '$24.99',
-    image: '/assets/images/mock/product-6.webp',
-    rating: 4.7,
-    reviews: 189,
-    badge: 'Trending',
-    discount: '24%',
-  },
-  {
-    id: 3,
-    name: 'Probiotics Plus',
-    price: '$28.99',
-    originalPrice: '$35.99',
-    image: '/assets/images/mock/product-7.webp',
-    rating: 4.8,
-    reviews: 167,
-    badge: 'Popular',
-    discount: '19%',
-  },
+const products: Product[] = [
+    { id: 1, image: Medicine, title: "Nat C 1000 hỗ trợ tăng đề kháng lọ 60 viên", price: "105.000đ" },
+    { id: 2, image: Medicine, title: "Paracetamol 500mg hộp 10 vỉ x 10 viên", price: "48.000đ" },
+    { id: 3, image: Medicine, title: "Vitamin D3 1000IU hỗ trợ phát triển chiều cao lọ 100 viên", price: "120.000đ" },
+    { id: 4, image: Medicine, title: "Vitamin E 400IU hỗ trợ làm đẹp da lọ 100 viên", price: "150.000đ" },
+    { id: 5, image: Medicine, title: "Fish Oil Omega-3 hỗ trợ tim mạch hộp 30 viên", price: "200.000đ" },
+    { id: 6, image: Medicine, title: "Kẽm Gluconate hỗ trợ tăng cường miễn dịch hộp 30 viên", price: "90.000đ" },
 ];
 
-export function BestSeller() {
-  return (
-    <Box sx={{ py: 4, bgcolor: 'grey.50' }}>
-      <Box sx={{ textAlign: 'center', mb: 4 }}>
-        <Typography variant="h3" gutterBottom>
-          Best Sellers
-        </Typography>
-        <Typography variant="body1" color="text.secondary">
-          Our most popular products trusted by thousands of customers
-        </Typography>
-      </Box>
+const BestSeller = React.memo(() => {
+    return (
+        <section className="best-seller-container">
+            {/* Tiêu đề */}
+            <div className="best-seller-title">
+                <span role="img" aria-label="fire">🔥</span>
+                SẢN PHẨM BÁN CHẠY
+            </div>
 
-      <Grid container spacing={3}>
-        {bestSellerProducts.map((product) => (
-          <Grid item xs={12} md={4} key={product.id}>
-            <Card
-              sx={{
-                height: '100%',
-                position: 'relative',
-                transition: 'transform 0.2s',
-                '&:hover': {
-                  transform: 'translateY(-8px)',
-                  boxShadow: 6,
-                },
-              }}
-            >
-              {/* Badge */}
-              <Chip
-                label={product.badge}
-                color="error"
-                size="small"
-                sx={{
-                  position: 'absolute',
-                  top: 16,
-                  left: 16,
-                  zIndex: 1,
-                  fontWeight: 'bold',
-                }}
-              />
-              
-              {/* Discount */}
-              <Chip
-                label={`-${product.discount}`}
-                color="success"
-                size="small"
-                sx={{
-                  position: 'absolute',
-                  top: 16,
-                  right: 16,
-                  zIndex: 1,
-                  fontWeight: 'bold',
-                }}
-              />
+            {/* Danh sách sản phẩm */}
+            <div className="product-list">
+                {products.map((product) => (
+                    <div key={product.id} className="product-card">
+                        <ProductContent 
+                            image={product.image} 
+                            title={product.title} 
+                            price={product.price} 
+                        />
+                    </div>
+                ))}
+            </div>
+        </section>
+    );
+});
 
-              <CardMedia
-                component="img"
-                height="250"
-                image={product.image}
-                alt={product.name}
-                sx={{ objectFit: 'cover' }}
-              />
-              
-              <CardContent>
-                <Typography variant="h6" gutterBottom>
-                  {product.name}
-                </Typography>
-                
-                <Stack direction="row" alignItems="center" spacing={1} sx={{ mb: 1 }}>
-                  <Rating value={product.rating} readOnly precision={0.1} size="small" />
-                  <Typography variant="body2" color="text.secondary">
-                    ({product.reviews})
-                  </Typography>
-                </Stack>
+BestSeller.displayName = 'BestSeller';
 
-                <Stack direction="row" alignItems="center" spacing={1}>
-                  <Typography variant="h6" color="primary" fontWeight="bold">
-                    {product.price}
-                  </Typography>
-                  <Typography
-                    variant="body2"
-                    color="text.secondary"
-                    sx={{ textDecoration: 'line-through' }}
-                  >
-                    {product.originalPrice}
-                  </Typography>
-                </Stack>
-              </CardContent>
+export default BestSeller;
 
-              <Box sx={{ p: 2, pt: 0 }}>
-                <Button variant="contained" fullWidth size="large">
-                  Add to Cart
-                </Button>
-              </Box>
-            </Card>
-          </Grid>
-        ))}
-      </Grid>
-
-      <Box sx={{ textAlign: 'center', mt: 4 }}>
-        <Button variant="outlined" size="large">
-          View All Best Sellers
-        </Button>
-      </Box>
-    </Box>
-  );
-}
 
