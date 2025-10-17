@@ -26,7 +26,7 @@ const ProductShowcase = React.memo(() => {
           <div className="slogan">
               <Image src={slogan} alt="slogan"/>
           </div>
-          <div className="all-product">
+          {/* <div className="all-product">
               <div className="product-bestseller">
                   <div className="name-bestseller">
                       <Image src={bestseller} alt="bestseller"/>
@@ -41,7 +41,7 @@ const ProductShowcase = React.memo(() => {
                       <button className="add-to-cart">Add to cart</button>
                   </div>
               </div>
-          </div>
+          </div> */}
       </div>
   );
 });

@@ -22,7 +22,7 @@ const ProductContent = React.memo<ProductContentProps>(({ image, title, price })
           />
           <p>{title}</p>
           <span className="price">{price}</span>
-          <button className="add-to-cart">Thêm vào giỏ</button>
+          <button className="add-to-cart">Add to cart</button>
       </div>
   );
 });

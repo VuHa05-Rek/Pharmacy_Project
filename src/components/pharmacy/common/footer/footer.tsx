@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import './Footer.css';
+import './footer.css';
 
 import plus from '../../assets/plus.png';
 import chat from '../../assets/chat.png';
@@ -103,8 +103,7 @@ export function PharmacyFooter (){
       <div className="footer-bottom">
         <h2>Designed and completed by Vu Ha, Pharmaceutical website design</h2>
         <p>
-          This website is based on learning, the content of this website is for
-          learning purposes only
+          This website is based on learning, the content of this website is for learning purposes only
         </p>
       </div>
     </div>

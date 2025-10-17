@@ -1,11 +1,11 @@
-.best-seller-container {
+.productnew-container {
     padding: 30px 20px;
     background-color: #f5dfac;
     border-radius: 8px;
     margin: 20px 0;
 }
 
-.best-seller-title {
+.product-new-title {
     font-size: 22px;
     font-weight: bold;
     margin-bottom: 20px;
@@ -16,7 +16,7 @@
     /* xanh dược phẩm */
 }
 
-.best-seller-title img {
+.product-new-title img {
     width: 28px;
     height: 28px;
 }

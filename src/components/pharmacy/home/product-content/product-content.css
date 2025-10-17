@@ -5,7 +5,8 @@
 
 .container-content img {
     width: 100%;
-    height: 450px;
+    height: auto;
+    max-height: 450px;
     object-fit: cover;
 }
 
@@ -28,6 +29,25 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+}
+
+/* ============== Breakpoints ============== */
+/* Desktop >1024px: base styles above */
+
+/* Tablet 768–1024px */
+@media (max-width: 1024px) {
+    .container-content img {
+        max-height: 380px;
+    }
+}
+
+/* Mobile <768px */
+@media (max-width: 768px) {
+    .container-content img {
+        max-height: 260px;
+    }
+    .slogan { padding: 0 12px; }
+    .list-bestseller { padding: 0 8px; }
 }
 
 .product-bestseller {
@@ -89,11 +109,13 @@
 }
 
 .add-to-cart {
+    display: block;
+    width: 100%;
+    margin: 10px auto;
     padding: 8px 14px;
     font-size: 14px;
     font-weight: 600;
     background-color: #f1c256;
-    /* xanh lá */
     color: white;
     border: none;
     border-radius: 6px;

@@ -30,6 +30,8 @@ export const metadata = {
     {
       rel: 'icon',
       url: `${CONFIG.assetsDir}/favicon.ico`,
+      // title: 'HoangHa Pharmacy',
+      // description: 'Your health, our mission',
     },
   ],
 };

@@ -145,14 +145,13 @@
     text-align: center;
     padding: 8px 0;
 }
+.footer-bottom p {
+    font-size: 14px;
+    font-weight: normal;
+}
 
-.footer-bottom h1 {
+.footer-bottom h2 {
     font-size: 14px;
     font-weight: normal;
     margin-bottom: 5px;
-}
-
-.footer-bottom span {
-    font-size: 14px;
-    font-weight: normal;
 }
