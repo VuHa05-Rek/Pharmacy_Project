@@ -12,6 +12,7 @@ interface ProductContentProps {
 const ProductContent = React.memo<ProductContentProps>(({ image, title, price }) => {
     return (
       <div className="product-item">
+        <div className="background-image">
           <Image 
             src={image} 
             alt={title} 
@@ -20,6 +21,7 @@ const ProductContent = React.memo<ProductContentProps>(({ image, title, price })
             style={{ objectFit: 'contain' }}
             priority={false}
           />
+          </div>
           <p>{title}</p>
           <span className="price">{price}</span>
           <button className="add-to-cart">Add to cart</button>

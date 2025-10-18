@@ -7,6 +7,9 @@ import { PharmacyFooter } from './common/footer';
 import { ProductShowcase } from './home/product-content';
 import { BestSeller } from './home/best-seller';
 import { ProductNew } from './home/new-product';
+import Product_1 from './home/product-types/product_1/product_1';
+
+
 
 // ----------------------------------------------------------------------
 
@@ -23,11 +26,12 @@ export function PharmacyView() {
     <Box sx={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
       <PharmacyHeader />
       <Box component="main" sx={{ flexGrow: 1 }}>
-        <Container maxWidth={false} disableGutters sx={{ px: 0 }}> 
-          {/* nội dung tràn lề; các phần tự quản lý phần đệm của chúng */}
+        <Container maxWidth="xl" sx={{ px: { xs: 2, sm: 3, md: 4 } }}> 
+          {/* Container có maxWidth và padding responsive */}
           <ProductShowcase />
           <BestSeller />
           <ProductNew />
+          <Product_1/>
         </Container>
       </Box>
       
