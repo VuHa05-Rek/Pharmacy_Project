@@ -5,7 +5,7 @@ import { ProductContent } from '../../product-content/product-content';
 import Medicine from '../../../assets/medicine.png';
 import Next from '../../../assets/next.png';
 import { StaticImageData } from 'next/image';
-import './product_2.css';
+import './product_3.css';
 
 interface Product {
     id: number;
@@ -22,15 +22,15 @@ const products: Product[] = [
     {id: 5, image: Medicine, title: "Vitamin C", price: "15.000đ"}
 ]
 
-const Product_2 = React.memo (() => {
+const Product_3 = React.memo (() => {
     return (
         <section className="container-product">
             <div className="head-product">
-                <button>Body Care</button>
-                <button>Facial Care</button>
-                <button>Hair Care</button>
-                <button>Cosmetics</button>
-                <button>Skin Condition</button>
+                <button>Thermometer</button>
+                <button>Blood Pressure Monitor</button>
+                <button>Blood Glucose MMeter</button>
+                <button>Face Mask</button>              
+                <button>Kit test Covid</button>
                 
             </div>
             <div className="product-list-wrapper">
@@ -71,6 +71,6 @@ const Product_2 = React.memo (() => {
     );
 });
 
-Product_2.displayName = 'Product_2';
+Product_3.displayName = 'Product_3';
 
-export default Product_2;
+export default Product_3;

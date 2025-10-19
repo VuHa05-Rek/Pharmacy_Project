@@ -8,8 +8,8 @@ import { ProductShowcase } from './home/product-content';
 import { BestSeller } from './home/best-seller';
 import { ProductNew } from './home/new-product';
 import Product_1 from './home/product-types/product_1/product_1';
-
-
+import Product_2 from "./home/product-types/product_2/product_2";
+import Product_3 from "./home/product-types/product_3/product_3";
 
 // ----------------------------------------------------------------------
 
@@ -32,6 +32,8 @@ export function PharmacyView() {
           <BestSeller />
           <ProductNew />
           <Product_1/>
+          <Product_2/>
+          <Product_3/>
         </Container>
       </Box>
       
