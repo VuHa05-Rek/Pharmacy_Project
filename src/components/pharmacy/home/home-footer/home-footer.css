@@ -1,0 +1,76 @@
+/* Toàn khối nền */
+.way-to-buy {
+    background-color: rgba(255, 166, 0, 0.236); 
+    padding: 30px 0;
+    text-align: center;
+    font-family: sans-serif;
+  }
+  
+  /* Tiêu đề nằm trong cùng khối */
+  .way-header p {
+    font-weight: 700;
+    font-size: 30px;
+    margin-bottom: 25px;
+    color: #000;
+  }
+  
+  /* Khối chứa 2 bên */
+  .way-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* 2 phần trái – phải */
+  .way-first,
+  .way-second {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    color: #000;
+  }
+  
+  /* Hình ảnh */
+  .way-first img,
+  .way-second img {
+    margin-bottom: 8px;
+    filter: invert(56%) sepia(83%) saturate(400%) hue-rotate(10deg) brightness(100%) contrast(90%);
+  }
+  
+  /* Đường chia giữa */
+  .divider {
+    width: 1px;
+    height: 80px;
+    background-color: #c65f0a;
+    margin: 0 40px;
+  }
+  
+.footer-bottom {
+    background-color: rgb(252, 164, 0);
+    text-align: center;
+    padding: 8px 0;
+}
+.footer-bottom p {
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.footer-bottom h2 {
+    font-size: 14px;
+    font-weight: normal;
+    margin-bottom: 5px;
+}
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .way-content {
+      flex-direction: column;
+    }
+    .divider {
+      display: none;
+    }
+  }
+  
