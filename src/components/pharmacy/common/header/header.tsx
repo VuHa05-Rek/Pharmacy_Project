@@ -14,6 +14,7 @@ import shoppingcart from '../../assets/shopping-cart.png';
 import user from '../../assets/user.png';
 import search from '../../assets/search.png';
 
+
 export function PharmacyHeader() {
   const navLinks = ['Home', 'Introduce', 'Policy', 'Support'];
   const categories = [
@@ -24,6 +25,7 @@ export function PharmacyHeader() {
   ];
 
   return (
+    
     <header className="Header">
       {/* Thanh trên cùng */}
       <div className="top-bar">
@@ -91,6 +93,7 @@ export function PharmacyHeader() {
         </ul>
       </div>
     </header>
+    
   );
 }
 
