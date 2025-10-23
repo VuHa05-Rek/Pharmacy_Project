@@ -1,36 +1,40 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["*"]
-    },
+    /* ======================= CẤU HÌNH CHUNG ======================= */
     "target": "es5",
     "lib": ["dom", "esnext", "dom.iterable"],
-    "strict": true,
-    "noEmit": true,
-    "allowJs": true,
-    "jsx": "preserve",
     "module": "esnext",
+    "jsx": "preserve",
     "incremental": true,
+    "strict": true,
     "skipLibCheck": true,
-    "noImplicitAny": true,
-    "noImplicitThis": true,
+    "noEmit": true,
     "esModuleInterop": true,
-    "isolatedModules": true,
-    "strictNullChecks": true,
-    "resolveJsonModule": true,
-    "moduleResolution": "node",
-    "noFallthroughCasesInSwitch": true,
-    "useUnknownInCatchVariables": false,
+    "allowJs": true,
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
-    "plugins": [{ "name": "next" }]
+    "moduleResolution": "node",
+    "isolatedModules": true,
+    "noFallthroughCasesInSwitch": true,
+    "resolveJsonModule": true,
+    "useUnknownInCatchVariables": false,
+    "plugins": [{ "name": "next" }],
+
+    /* ======================= ALIAS & BASE URL ======================= */
+    "baseUrl": "src",
+    "paths": {
+      "@/*": ["*"]
+    }
   },
+
+  /* ======================= FILES TO INCLUDE ======================= */
   "include": [
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts"
   ],
+
+  /* ======================= EXCLUDE ======================= */
   "exclude": ["node_modules"]
 }

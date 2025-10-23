@@ -35,7 +35,7 @@ const BestSeller = React.memo(() => {
             {/* Danh sách sản phẩm */}
             <div className="product-list">
                 {products.map((product) => (
-                    <div key={product.id} className="product-card">
+                    <div key={`product-${product.id}`} className="product-card">
                         <ProductContent 
                             image={product.image} 
                             title={product.title} 

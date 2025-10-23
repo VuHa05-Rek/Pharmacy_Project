@@ -1,6 +1,6 @@
-import { CONFIG } from 'src/config-global';
+import { CONFIG } from '@/config-global';
 
-import { PharmacyView } from 'src/components/pharmacy/pharmacy-view';
+import { PharmacyView } from '@/components/pharmacy/pharmacy-view';
 
 // ----------------------------------------------------------------------
 

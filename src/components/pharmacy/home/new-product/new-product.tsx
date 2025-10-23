@@ -30,7 +30,7 @@ const ProductNew = React.memo(() => {
             </div>
             <div className="product-list">
             {Product.map((product) => (
-                    <div key={product.id} className="product-card">
+                    <div key={`product-${product.id}`} className="product-card">
                         <ProductContent 
                             image={product.image} 
                             title={product.title} 

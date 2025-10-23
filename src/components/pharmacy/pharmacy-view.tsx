@@ -33,9 +33,9 @@ export function PharmacyView() {
           <ProductShowcase />
           <BestSeller />
           <ProductNew />
-          <Product_1/>
-          <Product_2/>
-          <Product_3/>
+          <Product_1 prefix="p1"/>
+          <Product_2 prefix = "p2"/>
+          <Product_3 prefix = "p3"/>
         </Container>
       </Box>
       
