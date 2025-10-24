@@ -13,7 +13,7 @@ export default function AllProductsPage() {
       <Box component="main" sx={{ flexGrow: 1, py: 4 }}>
         <Container maxWidth="xl">
           <h1 style={{ marginBottom: '2rem', fontSize: '2rem', fontWeight: 'bold' }}>
-            See all
+            All Products
           </h1>
           
           <Product_1 prefix="all-p1" />
