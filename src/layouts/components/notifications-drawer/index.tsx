@@ -16,13 +16,13 @@ import Tooltip from '@mui/material/Tooltip';
 import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 
-import { useBoolean } from 'src/hooks/use-boolean';
+import { useBoolean } from '@/hooks/use-boolean';
 
-import { Label } from 'src/components/label';
-import { Iconify } from 'src/components/iconify';
-import { varHover } from 'src/components/animate';
-import { Scrollbar } from 'src/components/scrollbar';
-import { CustomTabs } from 'src/components/custom-tabs';
+import { Label } from '@/components/label';
+import { Iconify } from '@/components/iconify';
+import { varHover } from '@/components/animate';
+import { Scrollbar } from '@/components/scrollbar';
+import { CustomTabs } from '@/components/custom-tabs';
 
 import { NotificationItem } from './notification-item';
 

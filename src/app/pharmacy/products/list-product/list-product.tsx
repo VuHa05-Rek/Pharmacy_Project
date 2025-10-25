@@ -3,7 +3,7 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import Medicine from '@/app/pharmacy/assets/medicine.png';
-import './list-product.css';
+import styles from './list-product.module.css';
 
 interface ProductProps {
   prefix: string;
@@ -26,15 +26,22 @@ export default function ListProduct({ prefix }: ProductProps) {
   ];
 
   return (
-    <section className="container-list-product">
-      <div className="list-product-header">
+    <section className={styles['container-list-product']}>
+      <div className={styles['list-product-header']}>
         {categories.map((item, i) => (
           <Link 
             key={`${prefix}-${i}`} 
             href={`/pharmacy/products/${item.slug}`} 
-            className="product-item"
+            className={styles['product-item']}
           >
-            <Image src={Medicine} alt="medicine" />
+            <div className={styles['image-container']}>
+              <Image 
+                src={Medicine} 
+                alt="medicine"
+                fill
+                style={{ objectFit: 'contain' }}
+              />
+            </div>
             <span>{item.label}</span>
           </Link>
         ))}

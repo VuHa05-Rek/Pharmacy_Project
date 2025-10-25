@@ -2,12 +2,12 @@
 
 import { useState, useEffect, useCallback } from 'react';
 
-import { paths } from 'src/routes/paths';
-import { useRouter, usePathname, useSearchParams } from 'src/routes/hooks';
+import { paths } from '@/routes/paths';
+import { useRouter, usePathname, useSearchParams } from '@/routes/hooks';
 
-import { CONFIG } from 'src/config-global';
+import { CONFIG } from '@/config-global';
 
-import { SplashScreen } from 'src/components/loading-screen';
+import { SplashScreen } from '@/components/loading-screen';
 
 import { useAuthContext } from '../hooks';
 

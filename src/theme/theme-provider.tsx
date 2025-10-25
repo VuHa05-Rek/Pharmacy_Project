@@ -10,7 +10,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v14-appRouter';
 import { Experimental_CssVarsProvider as CssVarsProvider } from '@mui/material/styles';
 
-import { useSettingsContext } from 'src/components/settings';
+import { useSettingsContext } from '@/components/settings';
 
 import { createTheme } from './create-theme';
 import { schemeConfig } from './scheme-config';

@@ -1,8 +1,8 @@
-import { paths } from 'src/routes/paths';
+import { paths } from '@/routes/paths';
 
-import { CONFIG } from 'src/config-global';
+import { CONFIG } from '@/config-global';
 
-import { SvgColor } from 'src/components/svg-color';
+import { SvgColor } from '@/components/svg-color';
 
 // ----------------------------------------------------------------------
 

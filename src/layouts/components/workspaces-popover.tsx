@@ -10,9 +10,9 @@ import MenuList from '@mui/material/MenuList';
 import MenuItem from '@mui/material/MenuItem';
 import ButtonBase from '@mui/material/ButtonBase';
 
-import { Label } from 'src/components/label';
-import { Iconify } from 'src/components/iconify';
-import { usePopover, CustomPopover } from 'src/components/custom-popover';
+import { Label } from '@/components/label';
+import { Iconify } from '@/components/iconify';
+import { usePopover, CustomPopover } from '@/components/custom-popover';
 
 // ----------------------------------------------------------------------
 

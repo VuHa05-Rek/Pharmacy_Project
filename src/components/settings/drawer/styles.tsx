@@ -5,7 +5,7 @@ import Box from '@mui/material/Box';
 import Tooltip from '@mui/material/Tooltip';
 import ButtonBase from '@mui/material/ButtonBase';
 
-import { varAlpha, stylesMode } from 'src/theme/styles';
+import { varAlpha, stylesMode } from '@/theme/styles';
 
 import { Iconify } from '../../iconify';
 import { svgColorClasses } from '../../svg-color';

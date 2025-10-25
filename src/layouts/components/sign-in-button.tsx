@@ -2,9 +2,9 @@ import type { ButtonProps } from '@mui/material/Button';
 
 import Button from '@mui/material/Button';
 
-import { RouterLink } from 'src/routes/components';
+import { RouterLink } from '@/routes/components';
 
-import { CONFIG } from 'src/config-global';
+import { CONFIG } from '@/config-global';
 
 // ----------------------------------------------------------------------
 

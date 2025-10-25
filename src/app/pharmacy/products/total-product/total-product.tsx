@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { StaticImageData } from 'next/image';
 import Medicine from '@/app/pharmacy/assets/medicine.png';
-import './total-product.css';
+import styles from './total-product.module.css';
 import { ProductContent } from '../../home';
 interface ProductProps {
   prefix: string;
@@ -46,10 +46,10 @@ const product : Product[] = [
 
 const TotalProduct: React.FC<ProductProps> = ({ prefix }) => {
     return (
-        <section className="total-container-product">
-        <div className="total-product-list">
+        <section className={styles['total-container-product']}>
+        <div className={styles['total-product-list']}>
             {product.map((product) => (
-                        <div key={`${prefix}-product-${product.id}`} className="product-card"> 
+                        <div key={`${prefix}-product-${product.id}`} className={styles['product-card']}> 
                             <ProductContent
                               image={product.image}
                               title={product.title}
@@ -59,7 +59,7 @@ const TotalProduct: React.FC<ProductProps> = ({ prefix }) => {
                       ))}
         </div>
         
-        <div className="see-more">
+        <div className={styles['see-more']}>
             <button>See More</button>
         </div>
 

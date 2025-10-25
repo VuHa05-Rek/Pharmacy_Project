@@ -4,11 +4,11 @@ import Paper from '@mui/material/Paper';
 import Popover from '@mui/material/Popover';
 import { useTheme } from '@mui/material/styles';
 
-import { usePathname } from 'src/routes/hooks';
-import { isExternalLink } from 'src/routes/utils';
-import { useActiveLink } from 'src/routes/hooks/use-active-link';
+import { usePathname } from '@/routes/hooks';
+import { isExternalLink } from '@/routes/utils';
+import { useActiveLink } from '@/routes/hooks/use-active-link';
 
-import { paper } from 'src/theme/styles';
+import { paper } from '@/theme/styles';
 
 import { NavItem } from './nav-item';
 import { NavUl, NavLi } from '../styles';

@@ -1,4 +1,4 @@
-import { fSub, fAdd } from 'src/utils/format-time';
+import { fSub, fAdd } from '@/utils/format-time';
 
 import { _mock } from './_mock';
 import { _addressBooks } from './_others';

@@ -1,15 +1,15 @@
-import type { NavSectionProps } from 'src/components/nav-section';
+import type { NavSectionProps } from '@/components/nav-section';
 
 import { useEffect } from 'react';
 
 import Box from '@mui/material/Box';
 import Drawer, { drawerClasses } from '@mui/material/Drawer';
 
-import { usePathname } from 'src/routes/hooks';
+import { usePathname } from '@/routes/hooks';
 
-import { Logo } from 'src/components/logo';
-import { Scrollbar } from 'src/components/scrollbar';
-import { NavSectionVertical } from 'src/components/nav-section';
+import { Logo } from '@/components/logo';
+import { Scrollbar } from '@/components/scrollbar';
+import { NavSectionVertical } from '@/components/nav-section';
 
 import { NavUpgrade } from '../components/nav-upgrade';
 

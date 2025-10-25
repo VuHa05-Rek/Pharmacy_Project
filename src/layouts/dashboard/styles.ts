@@ -1,13 +1,13 @@
-import type { SettingsState } from 'src/components/settings';
+import type { SettingsState } from '@/components/settings';
 import type { Theme, CSSObject } from '@mui/material/styles';
 
 import { useMemo } from 'react';
 
 import { styled } from '@mui/material/styles';
 
-import { varAlpha, stylesMode } from 'src/theme/styles';
+import { varAlpha, stylesMode } from '@/theme/styles';
 
-import { bulletColor } from 'src/components/nav-section';
+import { bulletColor } from '@/components/nav-section';
 
 // ----------------------------------------------------------------------
 

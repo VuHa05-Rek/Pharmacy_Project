@@ -12,14 +12,14 @@ import IconButton from '@mui/material/IconButton';
 import LoadingButton from '@mui/lab/LoadingButton';
 import InputAdornment from '@mui/material/InputAdornment';
 
-import { paths } from 'src/routes/paths';
-import { useRouter } from 'src/routes/hooks';
-import { RouterLink } from 'src/routes/components';
+import { paths } from '@/routes/paths';
+import { useRouter } from '@/routes/hooks';
+import { RouterLink } from '@/routes/components';
 
-import { useBoolean } from 'src/hooks/use-boolean';
+import { useBoolean } from '@/hooks/use-boolean';
 
-import { Iconify } from 'src/components/iconify';
-import { Form, Field } from 'src/components/hook-form';
+import { Iconify } from '@/components/iconify';
+import { Form, Field } from '@/components/hook-form';
 
 import { signUp } from '../../context/jwt';
 import { useAuthContext } from '../../hooks';

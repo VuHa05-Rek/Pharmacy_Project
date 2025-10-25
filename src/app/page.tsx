@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 
 import { useRouter } from 'next/navigation';
 
-import { CONFIG } from '@/config/config';
+import { CONFIG } from '@/config-global';
 
 import './reset.css'
 

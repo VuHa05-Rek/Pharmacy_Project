@@ -5,7 +5,7 @@ import { useState, useCallback } from 'react';
 import Tooltip from '@mui/material/Tooltip';
 import IconButton from '@mui/material/IconButton';
 
-import { Iconify } from 'src/components/iconify';
+import { Iconify } from '@/components/iconify';
 
 import { svgColorClasses } from '../../svg-color';
 

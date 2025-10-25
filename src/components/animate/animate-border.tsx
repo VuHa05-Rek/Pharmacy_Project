@@ -8,7 +8,7 @@ import { useRef, useState, useEffect } from 'react';
 
 import Box from '@mui/material/Box';
 
-import { borderGradient } from 'src/theme/styles';
+import { borderGradient } from '@/theme/styles';
 
 // ----------------------------------------------------------------------
 

@@ -1,7 +1,7 @@
 'use client';
 
 import type { BoxProps } from '@mui/material/Box';
-import type { NavSectionProps } from 'src/components/nav-section';
+import type { NavSectionProps } from '@/components/nav-section';
 
 import { useState, useCallback } from 'react';
 import parse from 'autosuggest-highlight/parse';
@@ -15,18 +15,18 @@ import IconButton from '@mui/material/IconButton';
 import InputAdornment from '@mui/material/InputAdornment';
 import Dialog, { dialogClasses } from '@mui/material/Dialog';
 
-import { useRouter } from 'src/routes/hooks';
-import { isExternalLink } from 'src/routes/utils';
+import { useRouter } from '@/routes/hooks';
+import { isExternalLink } from '@/routes/utils';
 
-import { useBoolean } from 'src/hooks/use-boolean';
-import { useEventListener } from 'src/hooks/use-event-listener';
+import { useBoolean } from '@/hooks/use-boolean';
+import { useEventListener } from '@/hooks/use-event-listener';
 
-import { varAlpha } from 'src/theme/styles';
+import { varAlpha } from '@/theme/styles';
 
-import { Label } from 'src/components/label';
-import { Iconify } from 'src/components/iconify';
-import { Scrollbar } from 'src/components/scrollbar';
-import { SearchNotFound } from 'src/components/search-not-found';
+import { Label } from '@/components/label';
+import { Iconify } from '@/components/iconify';
+import { Scrollbar } from '@/components/scrollbar';
+import { SearchNotFound } from '@/components/search-not-found';
 
 import { ResultItem } from './result-item';
 import { groupItems, applyFilter, getAllItems } from './utils';

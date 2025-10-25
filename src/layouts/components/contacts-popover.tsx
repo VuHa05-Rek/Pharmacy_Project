@@ -12,11 +12,11 @@ import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 import ListItemText from '@mui/material/ListItemText';
 
-import { fToNow } from 'src/utils/format-time';
+import { fToNow } from '@/utils/format-time';
 
-import { varHover } from 'src/components/animate';
-import { Scrollbar } from 'src/components/scrollbar';
-import { usePopover, CustomPopover } from 'src/components/custom-popover';
+import { varHover } from '@/components/animate';
+import { Scrollbar } from '@/components/scrollbar';
+import { usePopover, CustomPopover } from '@/components/custom-popover';
 
 // ----------------------------------------------------------------------
 

@@ -5,10 +5,10 @@ import { useCallback } from 'react';
 
 import Button from '@mui/material/Button';
 
-import { useRouter } from 'src/routes/hooks';
+import { useRouter } from '@/routes/hooks';
 
-import { useAuthContext } from 'src/auth/hooks';
-import { signOut } from 'src/auth/context/jwt/action';
+import { useAuthContext } from '@/auth/hooks';
+import { signOut } from '@/auth/context/jwt/action';
 
 // ----------------------------------------------------------------------
 

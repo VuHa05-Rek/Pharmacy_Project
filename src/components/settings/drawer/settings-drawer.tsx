@@ -9,10 +9,10 @@ import Typography from '@mui/material/Typography';
 import Drawer, { drawerClasses } from '@mui/material/Drawer';
 import { useTheme, useColorScheme } from '@mui/material/styles';
 
-import COLORS from 'src/theme/core/colors.json';
-import { paper, varAlpha } from 'src/theme/styles';
-import { defaultFont } from 'src/theme/core/typography';
-import PRIMARY_COLOR from 'src/theme/with-settings/primary-color.json';
+import COLORS from '@/theme/core/colors.json';
+import { paper, varAlpha } from '@/theme/styles';
+import { defaultFont } from '@/theme/core/typography';
+import PRIMARY_COLOR from '@/theme/with-settings/primary-color.json';
 
 import { Iconify } from '../../iconify';
 import { BaseOption } from './base-option';

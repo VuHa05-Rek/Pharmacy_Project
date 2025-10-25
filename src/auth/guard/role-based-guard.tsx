@@ -7,9 +7,9 @@ import { m } from 'framer-motion';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 
-import { ForbiddenIllustration } from 'src/assets/illustrations';
+import { ForbiddenIllustration } from '@/assets/illustrations';
 
-import { varBounce, MotionContainer } from 'src/components/animate';
+import { varBounce, MotionContainer } from '@/components/animate';
 
 // ----------------------------------------------------------------------
 

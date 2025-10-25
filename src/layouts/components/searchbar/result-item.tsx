@@ -2,9 +2,9 @@ import Box from '@mui/material/Box';
 import ListItemText from '@mui/material/ListItemText';
 import ListItemButton from '@mui/material/ListItemButton';
 
-import { varAlpha } from 'src/theme/styles';
+import { varAlpha } from '@/theme/styles';
 
-import { Label } from 'src/components/label';
+import { Label } from '@/components/label';
 
 // ----------------------------------------------------------------------
 
