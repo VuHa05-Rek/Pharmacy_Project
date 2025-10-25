@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { StaticImageData } from 'next/image';
 import Medicine from '@/app/pharmacy/assets/medicine.png';
+import DownArrow from '@/app/pharmacy/assets/down-arrow.png';
 import styles from './total-product.module.css';
 import { ProductContent } from '../../home';
 interface ProductProps {
@@ -41,7 +42,7 @@ const product : Product[] = [
     { id: 22, image: Medicine, title: "Vitamin C increases resistance, bottle of 60 tablets", price: "15.000đ" },
     { id: 23, image: Medicine, title: "Vitamin C increases resistance, bottle of 60 tablets", price: "15.000đ" },
     { id: 24, image: Medicine, title: "Vitamin C increases resistance, bottle of 60 tablets", price: "15.000đ" },
-    { id: 25, image: Medicine, title: "Vitamin C increases resistance, bottle of 60 tablets", price: "15.000đ" },
+   
 ];
 
 const TotalProduct: React.FC<ProductProps> = ({ prefix }) => {
@@ -60,7 +61,10 @@ const TotalProduct: React.FC<ProductProps> = ({ prefix }) => {
         </div>
         
         <div className={styles['see-more']}>
-            <button>See More</button>
+            <button>See More
+                <Image src={DownArrow} alt="Down Arrow" width={15} height={15} />
+            </button>
+            
         </div>
 
         </section>
