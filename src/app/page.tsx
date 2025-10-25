@@ -2,9 +2,11 @@
 
 import { useEffect } from 'react';
 
-import { useRouter } from 'src/routes/hooks';
+import { useRouter } from 'next/navigation';
 
-import { CONFIG } from 'src/config-global';
+import { CONFIG } from '@/config/config';
+
+import './reset.css'
 
 // ----------------------------------------------------------------------
 

@@ -6,7 +6,7 @@ import Product_2 from '@/app/pharmacy/home/product-types/product_2/product_2';
 import Product_3 from '@/app/pharmacy/home/product-types/product_3/product_3';
 import { Box, Container } from '@mui/material';
 import ListProduct from '@/app/pharmacy/products/list-product/list-product';
-
+import TotalProduct from '@/app/pharmacy/products/total-product/total-product';
 export default function AllProductsPage() {
   return (
     <Box sx={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
@@ -14,14 +14,18 @@ export default function AllProductsPage() {
       
       <Box component="main" sx={{ flexGrow: 1, py: 4 }}>
         <Container maxWidth="xl">
-          <h1 style={{ marginBottom: '2rem', fontSize: '2rem', fontWeight: 'bold' }}>
+          
+          <h1 style={{ marginBottom: '2rem', fontSize: '30px', fontWeight: 'bold', color: 'orange' }}>
             All Products
           </h1>
           
           <ListProduct prefix="all-p2" />
-          <Product_1 prefix="all-p1" />
-          <Product_2 prefix="all-p2" />
-          <Product_3 prefix="all-p3" />
+          
+          <h1 style={{ marginBottom: '2rem', fontSize: '30px', fontWeight: 'bold', color: 'orange' }}>
+            Number Of Products
+          </h1>
+          <TotalProduct prefix="all-p2" />
+
         </Container>
       </Box>
       <PharmacyFooter />

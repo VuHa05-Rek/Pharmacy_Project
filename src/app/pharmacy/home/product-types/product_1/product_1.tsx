@@ -14,7 +14,7 @@ interface Product {
 }
 
 interface ProductProps {
-  prefix: string; // ✅ thêm prefix
+  prefix: string; //thêm prefix
 }
 
 const products: Product[] = [
@@ -41,7 +41,7 @@ const Product_1: React.FC<ProductProps> = React.memo(({ prefix }) => {
           </div>
 
           {products.map((product) => (
-            <div key={`${prefix}-product-${product.id}`} className="product-card"> {/* ✅ key duy nhất */}
+            <div key={`${prefix}-product-${product.id}`} className="product-card"> {/* key duy nhất */}
               <ProductContent
                 image={product.image}
                 title={product.title}
