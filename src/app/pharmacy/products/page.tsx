@@ -1,4 +1,5 @@
 import { PharmacyHeader } from '@/app/pharmacy/common/header';
+import { PharmacyFooter } from '@/app/pharmacy/common/footer';
 import PharmacyFooter_home from '@/app/pharmacy/home/home-footer/home-footer';
 import Product_1 from '@/app/pharmacy/home/product-types/product_1/product_1';
 import Product_2 from '@/app/pharmacy/home/product-types/product_2/product_2';
@@ -21,8 +22,7 @@ export default function AllProductsPage() {
           <Product_3 prefix="all-p3" />
         </Container>
       </Box>
-      
-      <PharmacyFooter_home />
+      <PharmacyFooter />
     </Box>
   );
 }
