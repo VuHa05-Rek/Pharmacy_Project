@@ -5,6 +5,7 @@ import Product_1 from '@/app/pharmacy/home/product-types/product_1/product_1';
 import Product_2 from '@/app/pharmacy/home/product-types/product_2/product_2';
 import Product_3 from '@/app/pharmacy/home/product-types/product_3/product_3';
 import { Box, Container } from '@mui/material';
+import ListProduct from '@/app/pharmacy/products/list-product/list-product';
 
 export default function AllProductsPage() {
   return (
@@ -17,6 +18,7 @@ export default function AllProductsPage() {
             All Products
           </h1>
           
+          <ListProduct prefix="all-p2" />
           <Product_1 prefix="all-p1" />
           <Product_2 prefix="all-p2" />
           <Product_3 prefix="all-p3" />
