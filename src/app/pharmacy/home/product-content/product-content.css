@@ -20,6 +20,13 @@
     padding-bottom: 10px;
 }
 
+.list-bestseller {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 0 16px 16px;
+}
 
 .name-bestseller img {
     width: 24px;
@@ -32,23 +39,34 @@
     gap: 20px;
 }
 
+
 /* ============== Breakpoints ============== */
+
+
 /* Desktop >1024px: base styles above */
 
+
 /* Tablet 768–1024px */
+
 @media (max-width: 1024px) {
     .container-content img {
         max-height: 380px;
     }
 }
 
+
 /* Mobile <768px */
+
 @media (max-width: 768px) {
     .container-content img {
         max-height: 260px;
     }
-    .slogan { padding: 0 12px; }
-    .list-bestseller { padding: 0 8px; }
+    .slogan {
+        padding: 0 12px;
+    }
+    .list-bestseller {
+        padding: 0 8px;
+    }
 }
 
 .product-bestseller {
@@ -88,42 +106,4 @@
 .list-bestseller img {
     width: 120px;
     height: auto;
-    margin-bottom: 12px;
-}
-
-.info-medicine {
-    margin-bottom: 10px;
-}
-
-.info-medicine p {
-    font-size: 14px;
-    font-weight: 500;
-    color: #444;
-    margin-bottom: 6px;
-}
-
-.info-medicine span {
-    font-size: 14px;
-    font-weight: bold;
-    color: #e53935;
-    /* đỏ nổi bật giá */
-}
-
-.add-to-cart {
-    display: block;
-    width: 100%;
-    margin: 10px auto;
-    padding: 8px 14px;
-    font-size: 14px;
-    font-weight: 600;
-    background-color: #f1c256;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background 0.2s ease-in-out;
-}
-
-.add-to-cart:hover {
-    background-color: #da8c1f;
 }
