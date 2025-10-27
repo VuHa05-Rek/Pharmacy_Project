@@ -3,7 +3,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { StaticImageData } from 'next/image';
-import './best-seller.css';
+import styles from './best-seller.module.css';
 import { ProductContent } from '../product-content/product-content';
 import Medicine from '../../assets/medicine.png';
 
@@ -25,17 +25,17 @@ const products: Product[] = [
 
 const BestSeller = React.memo(() => {
     return (
-        <section className="best-seller-container">
+        <section className={styles.bestSellerContainer}>
             {/* Tiêu đề */}
-            <div className="best-seller-title">
+            <div className={styles.bestSellerTitle}>
                 <span role="img" aria-label="fire">🔥</span>
                 Best-selling Products
             </div>
 
             {/* Danh sách sản phẩm */}
-            <div className="product-list">
+            <div className={styles.productList}>
                 {products.map((product) => (
-                    <div key={`product-${product.id}`} className="product-card">
+                    <div key={`product-${product.id}`} className={styles.productCard}>
                         <ProductContent 
                             image={product.image} 
                             title={product.title} 

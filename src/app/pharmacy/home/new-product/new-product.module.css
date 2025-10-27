@@ -1,11 +1,11 @@
-.best-seller-container {
+.productNewContainer {
     padding: 30px 20px;
     background-color: #f5dfac;
     border-radius: 8px;
     margin: 20px 0;
 }
 
-.best-seller-title {
+.productNewTitle {
     font-size: 22px;
     font-weight: bold;
     margin-bottom: 20px;
@@ -13,15 +13,14 @@
     align-items: center;
     gap: 10px;
     color: black;
-    /* xanh dược phẩm */
 }
 
-.best-seller-title img {
+.productNewTitle img {
     width: 28px;
     height: 28px;
 }
 
-.product-list {
+.productList {
     display: grid;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -29,53 +28,54 @@
     gap: clamp(12px, 3vw, 24px);
 }
 
-.product-card {
-    background-color: #757272;
+.backgroundImage {
+    background-color: white;
+    border: 1px solid #8b8b8b44;
+    border-radius: 8px;
+    padding: 8px;
+}
+
+.productCard {
+    background: #F2F2F2;
     border: 1px solid #e0e0e0;
-    border-radius: 10px;
+    border-radius: 12px;
     padding: 15px;
     text-align: center;
     transition: all 0.3s ease;
 }
 
-.product-card img {
-    background-color: rgb(254, 254, 254);
+.productCard img {
     max-width: 100%;
     height: 160px;
     object-fit: contain;
     margin-bottom: 10px;
-    padding: 8px;
-    border-radius: 10px;
 }
 
-.product-card:hover {
-    border-color: orange;
+.productCard:hover {
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
     transform: translateY(-4px);
 }
 
-.product-card p {
+.productCard p {
     font-size: 15px;
     margin: 8px 0;
     color: #333;
     display: -webkit-box;
     -webkit-line-clamp: 2;
-    /* hiển thị 2 dòng */
+    line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
     min-height: 40px;
-    /* giữ đều chiều cao mô tả */
 }
 
-.product-card .price {
+.productCard .price {
     font-weight: bold;
     color: #d32f2f;
-    /* đỏ giá tiền */
     margin: 6px 0;
     font-size: 16px;
 }
 
-.product-card button {
+.productCard button {
     background: orange;
     border: none;
     color: #fff;
@@ -85,50 +85,18 @@
     transition: background 0.2s ease;
     font-size: 14px;
     margin-top: auto;
-    /* luôn đẩy nút xuống cuối */
     align-self: center;
-    /* căn giữa nút */
 }
 
-.product-card button:hover {
+.productCard button:hover {
     background: rgb(255, 182, 45);
 }
 
-
-/* ============== Breakpoints ============== */
-
-
-/* Tablet 768–1024px */
-
 @media (max-width: 1024px) {
-    .best-seller-container {
-        padding: 24px 16px;
-    }
-    .product-card img {
-        height: 150px;
-    }
-}
-
-
-/* Mobile <768px */
-
-@media (max-width: 768px) {
-    .best-seller-title {
-        font-size: 20px;
-    }
-    .product-list {
-        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-    }
-    .product-card {
+    .productCard {
         padding: 12px;
     }
-    .product-card img {
-        height: 130px;
-    }
-    .product-card p {
-        font-size: 14px;
-    }
-    .product-card .price {
-        font-size: 15px;
+    .productCard img {
+        height: 140px;
     }
 }

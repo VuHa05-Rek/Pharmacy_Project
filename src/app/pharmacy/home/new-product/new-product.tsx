@@ -1,10 +1,9 @@
 'use client';
 import React from 'react'
 import { StaticImageData } from 'next/image';
-import './new-product.css';
+import styles from './new-product.module.css';
 import {ProductContent} from '../product-content/product-content';
 import Medicine from '../../assets/medicine.png';
-import './new-product.css'
 
 interface Product {
     id: number;
@@ -23,14 +22,14 @@ const Product: Product []=[
 
 const ProductNew = React.memo(() => {
     return (
-         <section className="productnew-container">
-            <div className="product-new-title">
+         <section className={styles.productNewContainer}>
+            <div className={styles.productNewTitle}>
                 <span role="img" aria-label='fire'>🔥</span>
                 New Product 
             </div>
-            <div className="product-list">
+            <div className={styles.productList}>
             {Product.map((product) => (
-                    <div key={`product-${product.id}`} className="product-card">
+                    <div key={`product-${product.id}`} className={styles.productCard}>
                         <ProductContent 
                             image={product.image} 
                             title={product.title} 

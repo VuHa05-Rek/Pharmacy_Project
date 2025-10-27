@@ -20,13 +20,14 @@
     padding-bottom: 10px;
 }
 
-.list-bestseller {
+
+/* .list-bestseller {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
     padding: 0 16px 16px;
-}
+} */
 
 .name-bestseller img {
     width: 24px;

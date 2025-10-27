@@ -2,6 +2,8 @@ import React from 'react';
 import Image from 'next/image';
 import { StaticImageData } from 'next/image';
 import styles from './product-content.module.css';
+// import './product-content.module.css';
+// import './product-content.css';
 
 interface ProductContentProps {
   image: StaticImageData;
@@ -11,8 +13,8 @@ interface ProductContentProps {
 
 const ProductContent = React.memo<ProductContentProps>(({ image, title, price }) => {
     return (
-      <div className="product-item">
-        <div className="background-image">
+      <div className={styles.productItem}>
+        <div className={styles.backgroundImage}>
           <Image 
             src={image} 
             alt={title} 
@@ -23,8 +25,8 @@ const ProductContent = React.memo<ProductContentProps>(({ image, title, price })
           />
           </div>
           <p>{title}</p>
-          <span className="price">{price}</span>
-          <button className="add-to-cart">Add to cart</button>
+          <span className={styles.price}>{price}</span>
+          <button className={styles.addToCart}>Add to cart</button>
       </div>
   );
 });
