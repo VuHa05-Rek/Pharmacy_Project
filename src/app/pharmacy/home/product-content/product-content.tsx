@@ -23,10 +23,10 @@ const ProductContent = React.memo<ProductContentProps>(({ image, title, price })
             style={{ objectFit: 'contain' }}
             priority={false}
           />
-          </div>
-          <p>{title}</p>
-          <span className={styles.price}>{price}</span>
-          <button className={styles.addToCart}>Add to cart</button>
+      </div>
+      <p className={styles.title}>{title}</p>
+      <span className={styles.price}>{price}</span>
+      <button className={styles.addToCart}>Add to cart</button>
       </div>
   );
 });

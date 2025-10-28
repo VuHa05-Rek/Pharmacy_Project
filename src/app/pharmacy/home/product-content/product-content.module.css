@@ -4,12 +4,12 @@
     align-items: center;
     text-align: center;
     padding: 10px;
-    background: rgb(255, 255, 255);
+    background: rgb(238, 238, 238);
     border-radius: 8px;
     transition: transform 0.2s ease;
 }
 
-.background-image {
+.backgroundImage {
     position: relative;
     width: 160px;
     height: 160px;
@@ -19,7 +19,7 @@
     margin-bottom: 10px;
 }
 
-.product-item p {
+.title {
     font-size: 14px;
     font-weight: 600;
     color: #333;
@@ -34,26 +34,26 @@
 }
 
 .price {
-    color: #d4721b;
+    color: #000000;
     font-weight: 700;
     font-size: 16px;
     margin: 4px 0 8px;
 }
 
-.add-to-cart {
+.addToCart {
     width: 100%;
     padding: 8px;
-    background-color: #f5dfac;
+    background-color: orange;
     color: #333;
-    border: 1px solid #cea54e;
+    border: 1px solid #ff9500;
     border-radius: 4px;
     cursor: pointer;
     font-weight: 600;
     transition: all 0.2s ease;
 }
 
-.add-to-cart:hover {
-    background-color: #fab73a;
+.addToCart:hover {
+    background-color: #ff9500;
     border-color: #e37c1c;
     color: white;
 }
