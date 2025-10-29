@@ -4,7 +4,6 @@ import Image, { StaticImageData } from 'next/image';
 import { ProductContent } from '../../product-content/product-content';
 import Medicine from '../../../assets/medicine.png';
 import Next from '../../../assets/next.png';
-// import './product_2.css';
 import styles from './product_2.module.css';
 import { SeeAllButton } from '../../../common/all-product-button/AllProductButton';
 interface Product {

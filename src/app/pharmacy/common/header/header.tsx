@@ -4,6 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import './header.css';
 
+
 // Import hình ảnh
 import plus from '../../assets/plus.png';
 import documents from '../../assets/documents.png';
@@ -13,9 +14,12 @@ import guarantee from '../../assets/guarantee.png';
 import shoppingcart from '../../assets/shopping-cart.png';
 import user from '../../assets/user.png';
 import search from '../../assets/search.png';
+import { useRouter } from 'next/navigation';
+
 
 
 export function PharmacyHeader() {
+  const router = useRouter();
   const navLinks = ['Home', 'Introduce', 'Policy', 'Support'];
   const categories = [
     'Medicine',
@@ -46,9 +50,26 @@ export function PharmacyHeader() {
           {/* Thanh điều hướng */}
           <nav className="main-nav">
             {navLinks.map((text) => (
-              <span key={text}>{text}</span>
-            ))}
-          </nav>
+              <span
+                key={text}
+                onClick={() => {
+                  if (text === 'Home') {
+                    router.push('/'); // ← quay về trang chủ
+                  } else if (text === 'Introduce') {
+                    router.push('/introduce');
+                  } else if (text === 'Policy') {
+                    router.push('/policy');
+                  } else if (text === 'Support') {
+                    router.push('/support');
+                  }
+                }}
+                className="nav-item"
+                style={{ cursor: 'pointer' }}
+                >
+                {text}
+              </span>
+              ))}
+            </nav>
 
           {/* Ô tìm kiếm */}
           <div className="search-box">
