@@ -4,7 +4,8 @@ import Image, { StaticImageData } from 'next/image';
 import { ProductContent } from '../../product-content/product-content';
 import Medicine from '../../../assets/medicine.png';    
 import Next from '../../../assets/next.png';
-import './product_3.css';
+// import './product_3.css';
+import styles from './product_3.module.css'
 import { SeeAllButton } from '../../../common/all-product-button/AllProductButton';
 interface Product {
   id: number;
@@ -14,7 +15,7 @@ interface Product {
 }
 
 interface ProductProps {
-  prefix: string; // ✅ thêm prefix
+  prefix: string; // thêm prefix
 }
 
 const products: Product[] = [
@@ -27,21 +28,21 @@ const products: Product[] = [
 
 const Product_3: React.FC<ProductProps> = React.memo(({ prefix }) => {
   return (
-    <section className="container-product">
-      <div className="head-product">
+    <section className={styles['container-product']}>
+      <div className={styles['head-product']}>
         {['Pain Reliever, Fever Reducer', 'Cardiovascular', 'Nerve', 'Digestion, Liver', 'Eyes, Ears, Nose, Throat'].map((label, i) => (
           <button key={`${prefix}-label-${i}`}>{label}</button> 
         ))}
       </div>
 
-      <div className="product-list-wrapper">
-        <div className="product-list">
-          <div className="next-product1">
+      <div className={styles['product-list-wrapper']}>
+        <div className={styles['product-list']}>
+          <div className={styles['next-product1']}>
             <Image src={Next} alt="next" width={40} height={40} />
           </div>
 
           {products.map((product) => (
-            <div key={`${prefix}-product-${product.id}`} className="product-card"> {/* ✅ key duy nhất */}
+            <div key={`${prefix}-product-${product.id}`} className={styles['product-card']}> 
               <ProductContent
                 image={product.image}
                 title={product.title}
@@ -50,19 +51,19 @@ const Product_3: React.FC<ProductProps> = React.memo(({ prefix }) => {
             </div>
           ))}
 
-          <div className="next-product2">
+          <div className={styles['next-product2']}>
             <Image src={Next} alt="next" width={40} height={40} />
           </div>
         </div>
       </div>
 
-      <div className="all-product">
+      <div className={styles['all-product']}>
         <SeeAllButton />
       </div>
     </section>
   );
 });
 
-Product_3.displayName = 'Product_33';
+Product_3.displayName = 'Product_3';
 
 export default Product_3;

@@ -1,14 +1,16 @@
 .container-product {
     padding: 20px 0;
-    /* background-color: #f5dfac; */
-    background-color: white;
+    grid-template-columns: repeat(5, 1fr);
     border-radius: 8px;
     margin: 20px 0;
     width: 100%;
     overflow: hidden;
+    background-color: #f5dfac;
 }
 
+
 /* Hàng nút (Tiêu hóa, Làm đẹp...) */
+
 .head-product {
     display: flex;
     justify-content: center;
@@ -36,19 +38,25 @@
     color: white;
 }
 
+
 /* Khung chứa danh sách sản phẩm */
+
 .product-list-wrapper {
     position: relative;
     width: 100%;
     max-width: 1400px;
     margin: 0 auto;
-    padding: 0 60px; /* Tạo khoảng trống cho mũi tên */
+    padding: 0 60px;
+    /* Tạo khoảng trống cho mũi tên */
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: #f5dfac;
 }
 
+
 /* Danh sách sản phẩm */
+
 .product-list {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -56,11 +64,32 @@
     width: 100%;
 }
 
+
+/* Card sản phẩm */
+
+.product-card {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    border: 1px solid #e8e8e8;
+    padding: 10px;
+    background-color: #F2F2F2;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+
 /* Nút mũi tên */
-.next-product1, .next-product2 {
+
+.next-product1,
+.next-product2 {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%) ;
+    transform: translateY(-50%);
     cursor: pointer;
     z-index: 10;
     width: 40px;
@@ -92,39 +121,15 @@
     transform: translateY(-50%) scale(1.1);
 }
 
-.next-product1 img, .next-product2 img {
-    width: 24px;
-    height: 24px;
-    object-fit: contain;
-}
-
-/* Nút xem tất cả */
 .all-product {
     display: flex;
     justify-content: center;
-    align-items: center;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
-.all-product button {
-    width: 15%;
-    background-color: #ffffff;
-    color: rgb(0, 0, 0);
-    border: 2px solid #ff990044;
-    padding: 12px 32px;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: 600;
-    transition: background-color 0.3s ease;
-}
-
-.all-product button:hover {
-    background-color: #fcac2b;
-    color: white;
-}
 
 /* Responsive */
+
 @media (max-width: 1400px) {
     .product-list {
         gap: 15px;
@@ -157,7 +162,8 @@
     .product-list-wrapper {
         padding: 0 10px;
     }
-    .next-product1, .next-product2 {
+    .next-product1,
+    .next-product2 {
         display: none;
     }
 }
