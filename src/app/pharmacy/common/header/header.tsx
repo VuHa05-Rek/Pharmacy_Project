@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import { useState } from 'react';
 import Link from 'next/link';
 import './header.css';
 
@@ -14,7 +15,9 @@ import guarantee from '../../assets/guarantee.png';
 import shoppingcart from '../../assets/shopping-cart.png';
 import user from '../../assets/user.png';
 import search from '../../assets/search.png';
+import downarrow from '../../assets/down-arrow.png';
 import { useRouter } from 'next/navigation';
+
 
 
 
@@ -26,7 +29,23 @@ export function PharmacyHeader() {
     'Functional Food',
     'Pharmaceuticals - Cosmetics',
     'Medical Equipment',
-  ];
+  ] as const;
+
+  type Category = typeof categories[number];
+
+  const productsData: Record<Category, string[]> = {
+    Medicine: ['Paracetamol', 'Ibuprofen', 'Amoxicillin'],
+    'Functional Food': ['Vitamins', 'Minerals', 'Probiotics'],
+    'Pharmaceuticals - Cosmetics': ['Skincare', 'Haircare', 'Makeup'],
+    'Medical Equipment': ['Blood Pressure Monitors', 'Thermometers', 'Glucose Meters'],
+  };
+
+  const [selectedCategory, setSelectedCategory] = useState<Category | null>(null);
+
+  const handleClick = (cate: Category) => {
+    setSelectedCategory((prev) => (prev === cate ? null : cate));
+    // Nếu click cate thì ẩn đi, ngươc lại thì hiện sản phẩm ra
+  };
 
   return (
     
@@ -107,14 +126,23 @@ export function PharmacyHeader() {
       <div className="category-nav">
         <ul>
           {categories.map((cate) => (
-            <li key={cate}>
+            <li key={cate} onClick={() => handleClick(cate)} className ="cursor-pointer">
               <Link href="#">{cate}</Link>
+              <div className="down-arrow-icon">
+                <img src={downarrow.src} alt="down-arrow-icon"/>
+              </div>  
+              {selectedCategory === cate && (
+                <ul className="product-list">
+                  {productsData[cate].map((product) => (
+                    <li key={product}><Link href="#">{product}</Link></li>
+                  ))}
+                </ul>
+              )}           
             </li>
           ))}
         </ul>
       </div>
-    </header>
-    
+    </header> 
   );
 }
 
