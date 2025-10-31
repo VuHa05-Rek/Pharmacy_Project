@@ -13,7 +13,7 @@ import LoadingButton from '@mui/lab/LoadingButton';
 import InputAdornment from '@mui/material/InputAdornment';
 
 import { paths } from '@/routes/paths';
-import { useRouter } from '@/routes/hooks';
+import { useRouter, useSearchParams } from '@/routes/hooks';
 import { RouterLink } from '@/routes/components';
 
 import { useBoolean } from '@/hooks/use-boolean';
@@ -44,8 +44,9 @@ export const SignInSchema = zod.object({
 
 export function JwtSignInView() {
   const router = useRouter();
-
   const { checkUserSession } = useAuthContext();
+
+  const searchParams = useSearchParams();
 
   const [errorMsg, setErrorMsg] = useState('');
 
@@ -71,7 +72,10 @@ export function JwtSignInView() {
       await signInWithPassword({ email: data.email, password: data.password });
       await checkUserSession?.();
 
-      router.refresh();
+  // If the login page was visited with a returnTo query param, go there.
+  // Otherwise navigate to dashboard three (Page3) as the default landing page.
+  const returnTo = searchParams.get('returnTo');
+  await router.replace(returnTo ?? paths.dashboard.three);
     } catch (error) {
       console.error(error);
       setErrorMsg(typeof error === 'string' ? error : error.message);

@@ -21,6 +21,7 @@ const products: Product[] = [
     { id: 3, image: Medicine, title: "Vitamin E 400IU hỗ trợ làm đẹp da lọ 100 viên", price: "150.000đ" },
     { id: 4, image: Medicine, title: "Fish Oil Omega-3 hỗ trợ tim mạch hộp 30 viên", price: "200.000đ" },
     { id: 5, image: Medicine, title: "Kẽm Gluconate hỗ trợ tăng cường miễn dịch hộp 30 viên", price: "90.000đ" },
+    { id: 6, image: Medicine, title: "Thuốc Loratadin 10mg trị viêm mũi dị ứng, mày đay (Hộp 10 vỉ x 10 viên)", price: "50.000đ"}
 ];
 
 const BestSeller = React.memo(() => {

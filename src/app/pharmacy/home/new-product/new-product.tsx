@@ -18,6 +18,7 @@ const Product: Product []=[
     {id: 1, image: Medicine, title: "Vitamin E", price: "10.000đ" },
     {id: 1, image: Medicine, title: "Vitamin B", price: "80.000đ" },
     {id: 1, image: Medicine, title: "Paradol", price: "15.000đ" },
+    {id: 1, image: Medicine, title: "Vitamin B1", price: "15.000đ" },
 ];
 
 const ProductNew = React.memo(() => {

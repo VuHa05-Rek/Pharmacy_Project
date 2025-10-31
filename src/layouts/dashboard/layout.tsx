@@ -8,30 +8,24 @@ import Alert from '@mui/material/Alert';
 import { useTheme } from '@mui/material/styles';
 import { iconButtonClasses } from '@mui/material/IconButton';
 
-import { useBoolean } from '@/hooks/use-boolean';
-
 import { _contacts, _notifications } from '@/_mock';
 
 import { Logo } from '@/components/logo';
 import { useSettingsContext } from '@/components/settings';
 
 import { Main } from './main';
-import { NavMobile } from './nav-mobile';
 import { layoutClasses } from '../classes';
-import { NavVertical } from './nav-vertical';
-import { NavHorizontal } from './nav-horizontal';
+// Sidebar/navigation components removed to disable the sidebar UI
 import { _account } from '../config-nav-account';
 import { Searchbar } from '../components/searchbar';
-import { _workspaces } from '../config-nav-workspace';
-import { MenuButton } from '../components/menu-button';
+// Workspaces/menu button removed as sidebar is disabled
 import { LayoutSection } from '../core/layout-section';
 import { HeaderSection } from '../core/header-section';
-import { StyledDivider, useNavColorVars } from './styles';
+import { useNavColorVars } from './styles';
 import { AccountDrawer } from '../components/account-drawer';
 import { SettingsButton } from '../components/settings-button';
 import { LanguagePopover } from '../components/language-popover';
 import { ContactsPopover } from '../components/contacts-popover';
-import { WorkspacesPopover } from '../components/workspaces-popover';
 import { navData as dashboardNavData } from '../config-nav-dashboard';
 import { NotificationsDrawer } from '../components/notifications-drawer';
 
@@ -50,8 +44,6 @@ export type DashboardLayoutProps = {
 
 export function DashboardLayout({ sx, children, header, data }: DashboardLayoutProps) {
   const theme = useTheme();
-
-  const mobileNavOpen = useBoolean();
 
   const settings = useSettingsContext();
 
@@ -102,31 +94,11 @@ export function DashboardLayout({ sx, children, header, data }: DashboardLayoutP
                 This is an info Alert.
               </Alert>
             ),
-            bottomArea: isNavHorizontal ? (
-              <NavHorizontal
-                data={navData}
-                layoutQuery={layoutQuery}
-                cssVars={navColorVars.section}
-              />
-            ) : null,
+            // leftArea intentionally left minimal; sidebar/navigation is disabled
+            bottomArea: null,
             leftArea: (
               <>
-                {/* -- Nav mobile -- */}
-                <MenuButton
-                  onClick={mobileNavOpen.onTrue}
-                  sx={{
-                    mr: 1,
-                    ml: -1,
-                    [theme.breakpoints.up(layoutQuery)]: { display: 'none' },
-                  }}
-                />
-                <NavMobile
-                  data={navData}
-                  open={mobileNavOpen.value}
-                  onClose={mobileNavOpen.onFalse}
-                  cssVars={navColorVars.section}
-                />
-                {/* -- Logo -- */}
+                {/* Keep logo visible in header when horizontal layout is used */}
                 {isNavHorizontal && (
                   <Logo
                     sx={{
@@ -135,17 +107,6 @@ export function DashboardLayout({ sx, children, header, data }: DashboardLayoutP
                     }}
                   />
                 )}
-                {/* -- Divider -- */}
-                {isNavHorizontal && (
-                  <StyledDivider
-                    sx={{ [theme.breakpoints.up(layoutQuery)]: { display: 'flex' } }}
-                  />
-                )}
-                {/* -- Workspace popover -- */}
-                <WorkspacesPopover
-                  data={_workspaces}
-                  sx={{ color: 'var(--layout-nav-text-primary-color)' }}
-                />
               </>
             ),
             rightArea: (
@@ -178,22 +139,8 @@ export function DashboardLayout({ sx, children, header, data }: DashboardLayoutP
       /** **************************************
        * Sidebar
        *************************************** */
-      sidebarSection={
-        isNavHorizontal ? null : (
-          <NavVertical
-            data={navData}
-            isNavMini={isNavMini}
-            layoutQuery={layoutQuery}
-            cssVars={navColorVars.section}
-            onToggleNav={() =>
-              settings.onUpdateField(
-                'navLayout',
-                settings.navLayout === 'vertical' ? 'mini' : 'vertical'
-              )
-            }
-          />
-        )
-      }
+      // Sidebar is disabled — render no sidebar section
+      sidebarSection={null}
       /** **************************************
        * Footer
        *************************************** */
