@@ -34,7 +34,7 @@ export function PharmacyHeader() {
   type Category = typeof categories[number];
 
   const productsData: Record<Category, string[]> = {
-    Medicine: ['Paracetamol', 'Ibuprofen', 'Amoxicillin'],
+    Medicine: ['Paracetamol', 'Ibuprofen', 'Amoxicillin', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'],
     'Functional Food': ['Vitamins', 'Minerals', 'Probiotics'],
     'Pharmaceuticals - Cosmetics': ['Skincare', 'Haircare', 'Makeup'],
     'Medical Equipment': ['Blood Pressure Monitors', 'Thermometers', 'Glucose Meters'],
