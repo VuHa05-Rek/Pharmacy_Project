@@ -1,0 +1,37 @@
+.introduce .title {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.paragraph_one h1 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.paragraph_one {
+    margin-bottom: 12px;
+}
+
+.paragraph_two h1 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.paragraph_two {
+    margin-bottom: 12px;
+}
+
+.paragraph_three h1 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.paragraph_three {
+    margin-bottom: 12px;
+}

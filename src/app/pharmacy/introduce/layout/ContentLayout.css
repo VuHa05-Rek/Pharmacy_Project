@@ -1,0 +1,39 @@
+.content-layout {
+    display: flex;
+    flex-direction: column;
+    /* để Header nằm trên cùng */
+    height: 100vh;
+    /* chiếm toàn màn hình */
+}
+
+.main-layout {
+    display: flex;
+    /* cho Sidebar và Content nằm ngang */
+    flex: 1;
+    /* chiếm hết chiều cao còn lại dưới Header */
+    align-items: flex-start;
+    /* Sidebar và Content thẳng hàng từ trên xuống */
+    margin-top: 20px;
+}
+
+.sidebar {
+    width: 240px;
+    /* cố định chiều rộng Sidebar */
+    background: #f5f5f5;
+    /* ví dụ màu nền */
+    padding: 15px;
+}
+
+.content {
+    flex: 1;
+    /* chiếm phần còn lại */
+    padding: 20px;
+    padding-top: 15px;
+    background: white;
+    /* nền trắng cho nội dung */
+    min-height: 100%;
+    /* đảm bảo full chiều cao */
+    box-sizing: border-box;
+    overflow-y: auto;
+    /* nếu nội dung dài thì có scroll */
+}

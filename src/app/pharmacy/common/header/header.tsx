@@ -4,6 +4,7 @@ import React from 'react';
 import { useState } from 'react';
 import Link from 'next/link';
 import './header.css';
+import ContentLayout from '@/app/pharmacy/introduce/layout/ContentLayout';
 
 
 // Import hình ảnh
@@ -18,9 +19,6 @@ import search from '../../assets/search.png';
 import downarrow from '../../assets/down-arrow.png';
 import { useRouter } from 'next/navigation';
 
-
-
-
 export function PharmacyHeader() {
   const router = useRouter();
   const navLinks = ['Home', 'Introduce', 'Policy', 'Support'];
@@ -34,21 +32,32 @@ export function PharmacyHeader() {
   type Category = typeof categories[number];
 
   const productsData: Record<Category, string[]> = {
-    Medicine: ['Paracetamol', 'Ibuprofen', 'Amoxicillin', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'],
+
+    Medicine: ['Paracetamol', 'Ibuprofen', 'Amoxicillin'],
     'Functional Food': ['Vitamins', 'Minerals', 'Probiotics'],
     'Pharmaceuticals - Cosmetics': ['Skincare', 'Haircare', 'Makeup'],
     'Medical Equipment': ['Blood Pressure Monitors', 'Thermometers', 'Glucose Meters'],
   };
 
-  const [selectedCategory, setSelectedCategory] = useState<Category | null>(null);
+  // Theo dõi trạng thái hiện/ẩn của từng category
+  const [openCategories, setOpenCategories] = useState<Set<Category>>(new Set());
 
-  const handleClick = (cate: Category) => {
-    setSelectedCategory((prev) => (prev === cate ? null : cate));
-    // Nếu click cate thì ẩn đi, ngươc lại thì hiện sản phẩm ra
+  const handleClick = (cate: Category, event: React.MouseEvent) => {
+    event.preventDefault(); // Ngăn chặn hành vi mặc định của thẻ a
+    event.stopPropagation(); // Ngăn chặn sự kiện click lan ra ngoài
+    
+    setOpenCategories(prev => {
+      const newSet = new Set(prev);
+      if (newSet.has(cate)) {
+        newSet.delete(cate); // Đóng nếu đang mở
+      } else {
+        newSet.add(cate); // Mở nếu đang đóng
+      }
+      return newSet;
+    });
   };
 
   return (
-    
     <header className="Header">
       {/* Thanh trên cùng */}
       <div className="top-bar">
@@ -73,7 +82,7 @@ export function PharmacyHeader() {
                 key={text}
                 onClick={() => {
                   if (text === 'Home') {
-                    router.push('/'); // ← quay về trang chủ
+                    router.push('/');
                   } else if (text === 'Introduce') {
                     router.push('/introduce');
                   } else if (text === 'Policy') {
@@ -84,11 +93,11 @@ export function PharmacyHeader() {
                 }}
                 className="nav-item"
                 style={{ cursor: 'pointer' }}
-                >
+              >
                 {text}
               </span>
-              ))}
-            </nav>
+            ))}
+          </nav>
 
           {/* Ô tìm kiếm */}
           <div className="search-box">
@@ -126,15 +135,23 @@ export function PharmacyHeader() {
       <div className="category-nav">
         <ul>
           {categories.map((cate) => (
-            <li key={cate} onClick={() => handleClick(cate)} className ="cursor-pointer">
-              <Link href="#">{cate}</Link>
+            <li 
+              key={cate} 
+              onClick={(e) => handleClick(cate, e)} 
+              className="cursor-pointer"
+            >
+              <Link href="#" onClick={(e) => e.preventDefault()}>
+                {cate}
+              </Link>
               <div className="down-arrow-icon">
                 <img src={downarrow.src} alt="down-arrow-icon"/>
               </div>  
-              {selectedCategory === cate && (
+              {openCategories.has(cate) && (
                 <ul className="product-list">
                   {productsData[cate].map((product) => (
-                    <li key={product}><Link href="#">{product}</Link></li>
+                    <li key={product}>
+                      <Link href="#">{product}</Link>
+                    </li>
                   ))}
                 </ul>
               )}           
@@ -142,6 +159,9 @@ export function PharmacyHeader() {
           ))}
         </ul>
       </div>
+
+      {selectedCategory === 'Introduce' && <ContentLayout />}
+
     </header> 
   );
 }
