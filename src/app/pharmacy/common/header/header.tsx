@@ -84,7 +84,7 @@ export function PharmacyHeader() {
                   if (text === 'Home') {
                     router.push('/');
                   } else if (text === 'Introduce') {
-                    router.push('/introduce');
+                    router.push('/pharmacy/introduce');
                   } else if (text === 'Policy') {
                     router.push('/policy');
                   } else if (text === 'Support') {
@@ -159,9 +159,6 @@ export function PharmacyHeader() {
           ))}
         </ul>
       </div>
-
-      {selectedCategory === 'Introduce' && <ContentLayout />}
-
     </header> 
   );
 }

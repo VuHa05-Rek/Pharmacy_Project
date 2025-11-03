@@ -1,10 +1,21 @@
+// export default function IntroducePage() {
+//   return (
+//     <div style={{ padding: '2rem' }}>
+//       <h1>Introduce Page</h1>
+//       <p>Welcome to HoangHa Pharmacy introduction section.</p>
+//     </div>
+//   );
+// }
 'use client';
 import React from 'react';
-import Sidebar from '../sidebar/Sidebar';
-import Header from "../../common/header/header";
-import Footer from "../../common/footer/footer";
+import Sidebar from '../introduce/sidebar/Sidebar';
+import Header from "../common/header/header";
+import Footer from "../common/footer/footer";
 
-import './ContentLayout.css';
+import './layout/ContentLayout.css';
+
+
+
 const ContentLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div className="content-layout">
