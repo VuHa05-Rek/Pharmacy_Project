@@ -5,6 +5,8 @@ import Header from "../../common/header/header";
 import Footer from "../../common/footer/footer";
 
 import './ContentLayout.css';
+
+
 const ContentLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div className="content-layout">

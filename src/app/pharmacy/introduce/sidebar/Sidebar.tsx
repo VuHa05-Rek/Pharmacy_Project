@@ -14,7 +14,7 @@ const Sidebar = () => {
     { href: '/pharmacy/introduce/pages/payment', label: 'Payment policy' },
     { href: '/pharmacy/introduce/pages/warranty', label: 'Warranty and return policy' },
     { href: '/pharmacy/introduce/pages/privacy', label: 'Privacy policy' },
-    { href: '/pharmacy/introduce/pages/points', label: 'Membership points policy' },
+    { href: '/pharmacy/introduce/pages/membership-points', label: 'Membership points policy' },
   ];
 
   return (
