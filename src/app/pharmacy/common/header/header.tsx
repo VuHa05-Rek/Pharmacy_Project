@@ -21,7 +21,7 @@ import { useRouter } from 'next/navigation';
 
 export function PharmacyHeader() {
   const router = useRouter();
-  const navLinks = ['Home', 'Introduce', 'Policy', 'Support'];
+  const navLinks = ['Home', 'Introduce', 'Points Rules', 'Support'];
   const categories = [
     'Medicine',
     'Functional Food',
@@ -59,7 +59,7 @@ export function PharmacyHeader() {
 
   return (
     <header className="Header">
-      {/* Thanh trên cùng */}
+     
       <div className="top-bar">
         <p>ACCUMULATED PURCHASES - GET MANY DISCOUNTS IMMEDIATELY</p>
         <div className="bottom-bar">
@@ -70,7 +70,6 @@ export function PharmacyHeader() {
 
       {/* Header chính */}
       <div className="main-header">
-        {/* Logo */}
         <div className="Logo">HoangHa Pharmacy</div>
 
         {/* Khu vực giữa */}
@@ -85,8 +84,8 @@ export function PharmacyHeader() {
                     router.push('/');
                   } else if (text === 'Introduce') {
                     router.push('/pharmacy/introduce');
-                  } else if (text === 'Policy') {
-                    router.push('/policy');
+                  } else if (text === 'Points Rules') {
+                    router.push('/pharmacy/rules-points');
                   } else if (text === 'Support') {
                     router.push('/support');
                   }
