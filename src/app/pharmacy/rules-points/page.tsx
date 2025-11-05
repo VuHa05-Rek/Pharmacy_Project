@@ -12,9 +12,9 @@ export default function RulesPoints () {
             <h1>Loyalty & Points Program</h1>
             <div className="content-part-1">
                 <h2>I. Attractive Introduction</h2>
-                <h3>Loyal Customers - Accumulate Points to Redeem Offers</h3>
-                <p>Special gratitude program for customers who have trusted and supported. Every transaction brings a refund value, helping you shop more economically!</p>
-                <p>5% Cashback, Priority Purchase, Special Birthday Gift</p>
+                <p>- Loyal Customers - Accumulate Points to Redeem Offers</p>
+                <p>- Special gratitude program for customers who have trusted and supported. Every transaction brings a refund value, helping you shop more economically!</p>
+                <p>- 5% Cashback, Priority Purchase, Special Birthday Gift</p>
             </div>
             <div className="content-part-2">
                 <h2>II. Points Accumulation Mechanism</h2>
@@ -51,8 +51,8 @@ export default function RulesPoints () {
                 </table>
                 <div className="note">
                     <strong>Note:</strong> 
-                    <p>Points are added to the account 24 hours after the order is successfully delivered.</p>
-                    <p>Points are valid for 24 months from the date of accumulation.</p>
+                    <p>- Points are added to the account 24 hours after the order is successfully delivered.</p>
+                    <p>- Points are valid for 24 months from the date of accumulation.</p>
                 </div>
             </div>
             <div className="content-part-3">

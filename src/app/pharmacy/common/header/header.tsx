@@ -87,7 +87,7 @@ export function PharmacyHeader() {
                   } else if (text === 'Points Rules') {
                     router.push('/pharmacy/rules-points');
                   } else if (text === 'Support') {
-                    router.push('/support');
+                    router.push('/pharmacy/support');
                   }
                 }}
                 className="nav-item"
