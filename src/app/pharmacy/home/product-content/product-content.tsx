@@ -2,8 +2,6 @@ import React from 'react';
 import Image from 'next/image';
 import { StaticImageData } from 'next/image';
 import styles from './product-content.module.css';
-// import './product-content.module.css';
-// import './product-content.css';
 
 interface ProductContentProps {
   image: StaticImageData;

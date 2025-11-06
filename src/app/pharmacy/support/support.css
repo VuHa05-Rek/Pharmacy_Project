@@ -1,0 +1,124 @@
+.content-support {
+    padding: 15px;
+}
+
+.support-part-1 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.h2 {
+    margin-bottom: 15px;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+}
+
+.question {
+    font-weight: 600;
+    cursor: pointer;
+    position: relative;
+}
+
+.question::after {
+    content: '+';
+    position: absolute;
+    right: 0;
+    font-size: 20px;
+    transition: transform 0.2s ease;
+}
+
+.faq-item.active .question::after {
+    content: '-';
+    transform: rotate(180deg);
+}
+
+.answer {
+    max-height: 0;
+    overflow: hidden;
+    color: #555;
+    transition: max-height 0.3s ease;
+}
+
+.faq-item.active .answer {
+    max-height: 200px;
+    margin-top: 8px;
+}
+
+
+/* ---------- PHẦN III: DIRECT SUPPORT CONTACT CHANNEL ---------- */
+
+
+/* 1. Định dạng chung cho bảng */
+
+table {
+    width: 80%;
+    /* Chiều rộng 80% của vùng chứa */
+    margin: 20px auto;
+    /* Canh giữa bảng và tạo khoảng cách trên/dưới */
+    border-collapse: collapse;
+    /* Gộp các đường viền thành 1 */
+    font-family: Arial, sans-serif;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    /* Thêm đổ bóng nhẹ */
+}
+
+
+/* 2. Định dạng các ô (Header và Data) */
+
+th,
+td {
+    border: 1px solid #dddddd;
+    /* Đường viền nhẹ cho các ô */
+    padding: 12px 15px;
+    /* Khoảng đệm bên trong ô */
+    text-align: left;
+    /* Căn nội dung sang trái */
+}
+
+
+/* 3. Định dạng tiêu đề (Header) */
+
+thead th {
+    background-color: #fcb000;
+    /* Màu nền xanh lá cho tiêu đề */
+    color: white;
+    /* Chữ màu trắng */
+    text-transform: uppercase;
+}
+
+
+/* 4. Định dạng các hàng chẵn/lẻ (Striping) */
+
+tbody tr:nth-child(even) {
+    background-color: #f3f3f3;
+    /* Màu nền xám nhạt cho hàng chẵn */
+}
+
+
+/* 5. Hiệu ứng khi di chuột qua (Hover effect) */
+
+
+/* tbody tr:hover {
+    background-color: #e5e5e5;
+    cursor: pointer;
+} */
+
+
+/* 6. Canh phải cho cột Giá */
+
+tbody td:nth-child(3) {
+    text-align: right;
+    font-weight: bold;
+}
+
+.support-part-4 {
+    margin-top: 20px;
+}
+
+.support-part-4 a {
+    gap: 10px;
+    color: #000000;
+    font-weight: 550;
+}

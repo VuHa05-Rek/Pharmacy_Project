@@ -48,7 +48,6 @@
 .info {
     margin-left: 25px;
     margin-bottom: 158px;
-    
 }
 
 .info h1 {
@@ -56,6 +55,7 @@
     font-size: 25px;
     color: rgb(255, 128, 0);
 }
+
 
 /* .company-pharmacy h1 {
     margin-bottom: 2px;
@@ -88,11 +88,14 @@
 
 .intro {
     display: flex;
-    flex-direction: column; /* rất quan trọng để các con sắp theo cột */
-    gap: 6px;               /* khoảng cách giữa các link */
+    flex-direction: column;
+    /* rất quan trọng để các con sắp theo cột */
+    gap: 6px;
+    /* khoảng cách giữa các link */
     margin-left: 50px;
     font-size: 14px;
-    margin-bottom: 20px;    /* giảm lại cho hợp lý */
+    margin-bottom: 20px;
+    /* giảm lại cho hợp lý */
     margin-top: 10px;
 }
 
@@ -105,6 +108,7 @@
     text-decoration: none;
     color: inherit;
 }
+
 
 /* .intro .footer-link:hover {
     color: rgb(255, 128, 0);
@@ -139,6 +143,7 @@
     text-decoration: none;
     color: inherit;
 }
+
 
 /* .product-catalog .footer-link:hover {
     color: rgb(255, 128, 0);
@@ -179,6 +184,7 @@
     text-align: center;
     padding: 8px 0;
 }
+
 .footer-bottom p {
     font-size: 14px;
     font-weight: normal;
