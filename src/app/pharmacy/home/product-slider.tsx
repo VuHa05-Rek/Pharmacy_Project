@@ -49,28 +49,27 @@ export const ProductSlider = ({ title }: { title: string }) => {
                 style={{ visibility: 'hidden' }}
             >
                 {products.map((product) => (
-                    <Link 
-                            href={`/pharmacy/products/${product.id}`} 
-                            key={product.id}
-                            className="product-card">
-                        
-                            <div className="product-image">
-                            <Image
-                                src={product.image}
-                                alt={product.title}
-                                width={200}
-                                height={200}
-                                layout="responsive"
-                            />
-                            </div>
-                            <div className="product-info">
-                            <h3>{product.title}</h3>
-                            <p className="product-price">{product.price}</p>
-                            <button className="add-to-cart">Add to cart</button>
-                            </div>
-                        </Link>
+                    <Link
+                        href={`/pharmacy/products/${product.slug}`}
+                        key={product.slug}
+                        className="product-card"
+                    >
+                        <div className="product-image">
+                        <Image
+                            src={product.image}
+                            alt={product.title}
+                            width={200}
+                            height={200}
+                            layout="responsive"
+                        />
+                        </div>
+                        <div className="product-info">
+                        <h3>{product.title}</h3>
+                        <p className="product-price">{product.price}</p>
+                        <button className="add-to-cart">Add to cart</button>
+                        </div>
+                    </Link>
                     ))}
-
             </div>
         </div>
     );
