@@ -16,6 +16,7 @@ export default async function ProductDetailPage({ params }: { params: { slug: st
 
   return (
     <div className={styles.container}>
+      <div className={styles.container_header}>
       <div className={styles.imageSection}>
         <Image
           src={product.image}
@@ -28,14 +29,18 @@ export default async function ProductDetailPage({ params }: { params: { slug: st
       <div className={styles.infoSection}>
         <h1>{product.title}</h1>
         <p className={styles.price}>{product.price}</p>
+
         <p className={styles.description}>{product.ingredients}</p>
         <div className={styles.details}>
-          <h3>Drug ingredients</h3>
+          <p className={styles.manufacturer}><strong>Manufacturner:</strong> {product.manufacturer}</p>
+          <p className={styles.placeOfManufacture}><strong>Place of manufacture:</strong>{product.placeOfManufacture}</p>
+          <p className={styles.uses}><strong>Uses:</strong>{product.uses}</p>
         </div>
 
         <p><strong>Usage:</strong> {product.usage}</p>
         <p><strong>Ingredients:</strong> {product.ingredients}</p>
       </div>
+    </div>
     </div>
   );
 }
