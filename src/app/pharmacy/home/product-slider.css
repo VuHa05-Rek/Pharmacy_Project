@@ -40,6 +40,11 @@
     cursor: pointer;
     color: inherit;
     text-decoration: none;
+    position: relative;
+}
+
+.product-card * {
+    pointer-events: auto;
 }
 
 .product-card:hover {
@@ -48,19 +53,33 @@
 }
 
 .product-image {
-    position: relative;
     width: 100%;
-    padding-top: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
 }
 
 .product-image img {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
     object-fit: contain;
-    padding: 1rem;
+}
+
+.product-image {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 .product-info {
@@ -97,6 +116,7 @@
     cursor: pointer;
     margin-top: auto;
     transition: background 0.2s;
+    pointer-events: auto;
 }
 
 .add-to-cart:hover {

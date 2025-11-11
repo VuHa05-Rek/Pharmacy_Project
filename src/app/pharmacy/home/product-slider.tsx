@@ -5,7 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Medicine from '@/app/pharmacy/assets/medicine.png';
 import { products } from '@/app/pharmacy/products/data/products';
-interface Product {
+interface products {
     id: number;
     image: any;
     title: string;
@@ -50,25 +50,31 @@ export const ProductSlider = ({ title }: { title: string }) => {
             >
                 {products.map((product) => (
                     <Link
-                        href={`/pharmacy/products/${product.slug}`}
                         key={product.slug}
+                        href={`/pharmacy/products/${product.slug}`}
                         className="product-card"
-                    >
+                        onClick={(e) => {
+                            console.log("✅ Click vào:", product.slug);
+                        }}
+                        >
                         <div className="product-image">
-                        <Image
-                            src={product.image}
-                            alt={product.title}
-                            width={200}
-                            height={200}
-                            layout="responsive"
-                        />
+                            <Image
+                                src={product.image}
+                                alt={product.title}
+                                width={200}
+                                height={200}
+                                style={{ objectFit: 'contain' }}
+                            />
                         </div>
+
+
                         <div className="product-info">
                         <h3>{product.title}</h3>
                         <p className="product-price">{product.price}</p>
                         <button className="add-to-cart">Add to cart</button>
                         </div>
                     </Link>
+                    
                     ))}
             </div>
         </div>
