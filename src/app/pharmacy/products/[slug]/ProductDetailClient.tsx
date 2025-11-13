@@ -1,8 +1,10 @@
-// src/app/pharmacy/products/[slug]/ProductDetailClient.tsx
+
 'use client';
 
 import React, { useState } from 'react';
 import Image from 'next/image';
+import Header from '../../common/header/header';
+import Footer from '../../common/footer/footer';
 import styles from './product-detail.module.css';
 
 export default function ProductDetailClient({ product }: { product: any }) {
@@ -11,7 +13,9 @@ export default function ProductDetailClient({ product }: { product: any }) {
   const handleDecrease = () => setQuantity((q) => Math.max(q - 1, 1));
 
   return (
+
     <div className={styles.container}>
+      <Header />
       <div className={styles.container_header}>
         <div className={styles.imageSection}>
           <Image
@@ -26,9 +30,15 @@ export default function ProductDetailClient({ product }: { product: any }) {
 
         <div className={styles.infoSection}>
           <h1>{product.title}</h1>
-          <p className={styles.price}>{product.price}</p>
-
-          <p className={styles.description}>{product.description ?? product.ingredients}</p>
+          <div className= {styles.titlePrice}>
+            <p className={styles.price}>{product.price}</p>
+          </div>
+          
+          <div className="info-common">
+            <li className={styles.manufacturer}><strong>Manufacturer: </strong>{product.manufacturer}</li>
+            <li className={styles.placeOfManufacture}><strong>Place Of Manufacture: </strong>{product.placeOfManufacture}</li>
+            <li className={styles.uses}><strong>Uses: </strong>{product.uses ?? product.uses}</li>
+          </div>
 
           <div className={styles.quantityContainer}>
             <p>Select Quantity</p>
@@ -49,6 +59,7 @@ export default function ProductDetailClient({ product }: { product: any }) {
         <h2>Outstanding Features</h2>
         <p>{product.outstanding ?? 'Không có thông tin'}</p>
       </div>
+      <Footer />
     </div>
   );
 }

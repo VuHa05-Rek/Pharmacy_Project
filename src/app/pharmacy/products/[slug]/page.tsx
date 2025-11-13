@@ -1,4 +1,4 @@
-// src/app/pharmacy/products/[slug]/page.tsx
+
 import { products } from '@/app/pharmacy/products/data/products';
 import { notFound } from 'next/navigation';
 import ProductDetailClient from './ProductDetailClient'; // client component nằm cùng thư mục
