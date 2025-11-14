@@ -34,7 +34,7 @@ export default function ProductDetailClient({ product }: { product: any }) {
             <p className={styles.price}>{product.price}</p>
           </div>
           
-          <div className="info-common">
+          <div className={styles.infoCommon}>
             <li className={styles.manufacturer}><strong>Manufacturer: </strong>{product.manufacturer}</li>
             <li className={styles.placeOfManufacture}><strong>Place Of Manufacture: </strong>{product.placeOfManufacture}</li>
             <li className={styles.uses}><strong>Uses: </strong>{product.uses ?? product.uses}</li>
