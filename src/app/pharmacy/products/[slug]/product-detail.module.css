@@ -49,12 +49,15 @@
 .quantityContainer {
     display: flex;
     gap: 30px;
-    padding-top: 30px;
+    padding-top: 50px;
+    padding-bottom: 30px;
     overflow: hidden;
 }
 
-.quantityContainer p {
-    margin-right: 20px;
+.selectLabel {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    margin-right: 25px;
     font-size: 15px;
 }
 
@@ -66,7 +69,6 @@
     border-radius: 30px;
     width: fit-content;
     border: 1px solid orange;
-    width: 180px;
 }
 
 .quantityBtn {

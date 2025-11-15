@@ -41,7 +41,9 @@ export default function ProductDetailClient({ product }: { product: any }) {
           </div>
 
           <div className={styles.quantityContainer}>
-            <p>Select Quantity</p>
+            <div className={styles.select}>
+              <p className={styles.selectLabel}>Select Quantity</p>
+            </div>
             <div className={styles.quantityInput}>
               <button type="button" className={styles.quantityBtn} onClick={handleDecrease}>-</button>
               <input type="number" className={styles.quantityNumber} value={quantity} readOnly />
