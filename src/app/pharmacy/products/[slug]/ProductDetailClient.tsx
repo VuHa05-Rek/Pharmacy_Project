@@ -51,17 +51,28 @@ export default function ProductDetailClient({ product }: { product: any }) {
             </div>
           </div>
           <div className={styles.buy}>
-            <button> className={styles.buychoose} Select to buy</button>
-            <button className={styles.buyButton} style={{ marginTop: '1rem' }}>
-              Add to cart
-            </button>
+            <button className={styles.buychoose}> SELECT TO BUY</button>
+            <button className={styles.buyButton} >ADD TO CART</button>
           </div>
         </div>
       </div>
 
       <div className={styles.container_footer}>
-        <h2>Outstanding Features</h2>
-        <p>{product.outstanding ?? 'Không có thông tin'}</p>
+        <h1>{product.title}</h1>
+        <div className={styles.image_outstanding}>
+          <Image
+              src={product.image}
+              alt={product.title}
+              width={500}
+              height={500}
+              className={styles.image}
+              priority={false}
+            />
+        </div>
+        <div className={styles.outstanding_features_container}>
+          <h2>Outstanding Features</h2>
+          <p>{product.outstanding ?? 'Không có thông tin'}</p>
+        </div>
       </div>
       <Footer />
     </div>

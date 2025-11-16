@@ -93,3 +93,67 @@
     padding: 8px 0;
     margin: 0;
 }
+
+.buy {
+    padding: 10px;
+    display: flex;
+    gap: 80px;
+}
+
+.buychoose {
+    gap: 20px;
+    padding: 20px;
+    margin-right: 40px;
+    background-color: rgb(255, 238, 205);
+    border: 2px solid orange;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    color: orange;
+}
+
+.buychoose:hover {
+    background-color: orange;
+    color: white;
+}
+
+.buyButton {
+    width: 140px;
+    background-color: rgb(255, 238, 205);
+    border: 2px solid orange;
+    border-radius: 10px;
+    color: orange;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.buyButton:hover {
+    background-color: orange;
+    color: white;
+}
+
+.container_footer {
+    padding: 30px;
+    border: 2px solid rgb(155, 155, 155);
+}
+
+.container_footer h1 {
+    margin-left: 30px;
+    font-size: 25px;
+}
+
+.image_outstanding {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.outstanding_features_container {
+    margin-left: 25px;
+}
+
+.outstanding_features_container p {
+    margin-top: 20px;
+}
