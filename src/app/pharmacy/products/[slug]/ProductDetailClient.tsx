@@ -50,10 +50,12 @@ export default function ProductDetailClient({ product }: { product: any }) {
               <button type="button" className={styles.quantityBtn} onClick={handleIncrease}>+</button>
             </div>
           </div>
-
-          <button className={styles.buyButton} style={{ marginTop: '1rem' }}>
-            🛒 Add to cart
-          </button>
+          <div className={styles.buy}>
+            <button> className={styles.buychoose} Select to buy</button>
+            <button className={styles.buyButton} style={{ marginTop: '1rem' }}>
+              Add to cart
+            </button>
+          </div>
         </div>
       </div>
 
