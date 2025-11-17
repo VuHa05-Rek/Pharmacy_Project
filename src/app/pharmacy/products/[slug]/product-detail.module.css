@@ -133,8 +133,15 @@
 }
 
 .container_footer {
+    padding: 2px;
+}
+
+.container_shadow {
+    transform: scale(0.9);
+    margin: 0;
     padding: 30px;
-    border: 2px solid rgb(155, 155, 155);
+    border: 2.5px solid rgb(200, 200, 200);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
 }
 
 .container_footer h1 {
@@ -156,4 +163,11 @@
 
 .outstanding_features_container p {
     margin-top: 20px;
+}
+
+.titleOtherProduct {
+    font-size: 25px;
+    font-weight: 600;
+    margin-left: 30px;
+    padding-bottom: 20px;
 }

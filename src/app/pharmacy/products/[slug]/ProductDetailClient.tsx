@@ -6,6 +6,8 @@ import Image from 'next/image';
 import Header from '../../common/header/header';
 import Footer from '../../common/footer/footer';
 import styles from './product-detail.module.css';
+import {OtherProduct} from '../other-product/other-product';
+import Comment from '../[slug]/comment-section/CommentSection';
 
 export default function ProductDetailClient({ product }: { product: any }) {
   const [quantity, setQuantity] = useState(1);
@@ -58,23 +60,31 @@ export default function ProductDetailClient({ product }: { product: any }) {
       </div>
 
       <div className={styles.container_footer}>
-        <h1>{product.title}</h1>
-        <div className={styles.image_outstanding}>
-          <Image
-              src={product.image}
-              alt={product.title}
-              width={500}
-              height={500}
-              className={styles.image}
-              priority={false}
-            />
-        </div>
-        <div className={styles.outstanding_features_container}>
-          <h2>Outstanding Features</h2>
-          <p>{product.outstanding ?? 'Không có thông tin'}</p>
-        </div>
+          <div className={styles.container_shadow}>
+            <h1>{product.title}</h1>
+            <div className={styles.image_outstanding}>
+              <Image
+                  src={product.image}
+                  alt={product.title}
+                  width={500}
+                  height={500}
+                  className={styles.image}
+                  priority={false}
+                />
+            </div>
+            <div className={styles.outstanding_features_container}>
+              <h2>Outstanding Features</h2>
+              <p>{product.outstanding ?? 'Không có thông tin'}</p>
+            </div>
+          </div>
       </div>
+      <div className={styles.otherProductContainer}>
+        <p className={styles.titleOtherProduct}>Other Product</p>
+        <OtherProduct />
+      </div>      
       <Footer />
+      <Comment slug={slug} />
+
     </div>
   );
 }

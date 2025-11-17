@@ -14,6 +14,6 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
     notFound();
   }
 
-  // Truyền product (object) vào component client để xử lý tương tác
+  
   return <ProductDetailClient product={product} />;
 }
