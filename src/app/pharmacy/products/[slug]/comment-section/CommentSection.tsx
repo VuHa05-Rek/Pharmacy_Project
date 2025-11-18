@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import styles from './comment.module.css'; // nếu bạn có CSS module riêng
+import styles from './CommentSection.module.css'; // nếu bạn có CSS module riêng
 
 interface Comment {
   id: number;
@@ -13,6 +13,8 @@ interface Comment {
   createdAt: string;
 }
 
+
+// Đây là form mẫu để text và lưu trong RAM viết bằng Route Next JS còn thiếu Backend 
 export default function CommentSection({ slug }: { slug: string }) {
   const [gender, setGender] = useState<'Anh' | 'Chị'>('Anh');
   const [name, setName] = useState('');
@@ -51,7 +53,7 @@ export default function CommentSection({ slug }: { slug: string }) {
     <div className={styles.commentContainer}>
       <h2 className={styles.title}>BÌNH LUẬN</h2>
 
-      {/* 🔥 FORM NHẬP BÌNH LUẬN */}
+      {/* FORM NHẬP BÌNH LUẬN */}
       <form className={styles.form} onSubmit={handleSubmit}>
         
         {/* Giới tính */}
