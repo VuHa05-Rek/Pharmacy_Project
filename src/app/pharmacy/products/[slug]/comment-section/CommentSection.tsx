@@ -6,7 +6,7 @@ import styles from './CommentSection.module.css'; // nếu bạn có CSS module 
 interface Comment {
   id: number;
   slug: string;
-  gender: 'Anh' | 'Chị';
+  gender: 'Men' | 'Women';
   name: string;
   phone: string;
   content: string;
@@ -16,7 +16,7 @@ interface Comment {
 
 // Đây là form mẫu để text và lưu trong RAM viết bằng Route Next JS còn thiếu Backend 
 export default function CommentSection({ slug }: { slug: string }) {
-  const [gender, setGender] = useState<'Anh' | 'Chị'>('Anh');
+  const [gender, setGender] = useState<'Men' | 'Women'>('Men');
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
   const [content, setContent] = useState('');
@@ -27,7 +27,7 @@ export default function CommentSection({ slug }: { slug: string }) {
     e.preventDefault();
 
     if (!name || !phone || !content) {
-      alert('Vui lòng nhập đầy đủ thông tin!');
+      alert('Please enter complete information!');
       return;
     }
 
@@ -51,29 +51,32 @@ export default function CommentSection({ slug }: { slug: string }) {
 
   return (
     <div className={styles.commentContainer}>
-      <h2 className={styles.title}>BÌNH LUẬN</h2>
+      <div className={styles.commentShadow}>
+      <h2 className={styles.title}>COMMENT</h2>
 
       {/* FORM NHẬP BÌNH LUẬN */}
       <form className={styles.form} onSubmit={handleSubmit}>
         
         {/* Giới tính */}
+
+        <div className={styles.totalInformation}>
         <div className={styles.genderGroup}>
           <label>
             <input
               type="radio"
-              checked={gender === 'Anh'}
-              onChange={() => setGender('Anh')}
+              checked={gender === 'Men'}
+              onChange={() => setGender('Men')}
             />
-            Anh
+            Men
           </label>
 
           <label>
             <input
               type="radio"
-              checked={gender === 'Chị'}
-              onChange={() => setGender('Chị')}
+              checked={gender === 'Women'}
+              onChange={() => setGender('Women')}
             />
-            Chị
+            Women
           </label>
         </div>
 
@@ -81,35 +84,36 @@ export default function CommentSection({ slug }: { slug: string }) {
         <div className={styles.inputRow}>
           <input
             type="text"
-            placeholder="Họ và tên *"
+            placeholder="Full name *"
             value={name}
             onChange={(e) => setName(e.target.value)}
           />
 
           <input
             type="text"
-            placeholder="Số điện thoại"
+            placeholder="Phone"
             value={phone}
             onChange={(e) => setPhone(e.target.value)}
           />
         </div>
+        </div>
 
         {/* Nội dung bình luận */}
         <textarea
-          placeholder="Nhập bình luận..."
+          placeholder="Enter comment..."
           value={content}
           onChange={(e) => setContent(e.target.value)}
         ></textarea>
 
         <button type="submit" className={styles.submitBtn}>
-          Gửi bình luận
+          Send Comment
         </button>
       </form>
 
-      {/* 🔥 HIỂN THỊ DANH SÁCH BÌNH LUẬN */}
+      {/* HIỂN THỊ DANH SÁCH BÌNH LUẬN */}
       <div className={styles.commentList}>
         {comments.length === 0 && (
-          <p className={styles.noComment}>Chưa có bình luận nào.</p>
+          <p className={styles.noComment}>No comments yet.</p>
         )}
 
         {comments.map((cmt) => (
@@ -122,7 +126,7 @@ export default function CommentSection({ slug }: { slug: string }) {
           </div>
         ))}
       </div>
-      <div className="yy"
+      </div>
     </div>
   );
 }
