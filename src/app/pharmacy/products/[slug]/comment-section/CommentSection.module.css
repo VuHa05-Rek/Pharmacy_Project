@@ -21,3 +21,8 @@
     align-items: center;
     margin-bottom: 20px;
 }
+
+.inputRow {
+    border-radius: 30px;
+    margin-bottom: 20px;
+}
