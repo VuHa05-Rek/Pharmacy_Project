@@ -100,6 +100,7 @@ export default function CommentSection({ slug }: { slug: string }) {
 
         {/* Nội dung bình luận */}
         <textarea
+          className={styles.textarea} 
           placeholder="Enter comment..."
           value={content}
           onChange={(e) => setContent(e.target.value)}
