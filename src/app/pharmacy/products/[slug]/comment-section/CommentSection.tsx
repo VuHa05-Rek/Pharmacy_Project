@@ -56,59 +56,56 @@ export default function CommentSection({ slug }: { slug: string }) {
 
       {/* FORM NHẬP BÌNH LUẬN */}
       <form className={styles.form} onSubmit={handleSubmit}>
-        
-        {/* Giới tính */}
-
         <div className={styles.totalInformation}>
-        <div className={styles.genderGroup}>
-          <label>
+          <div className={styles.genderGroup}>
+            <label>
+              <input
+                type="radio"
+                checked={gender === 'Men'}
+                onChange={() => setGender('Men')}
+              />
+              Men
+            </label>
+
+            <label>
+              <input
+                type="radio"
+                checked={gender === 'Women'}
+                onChange={() => setGender('Women')}
+              />
+              Women
+            </label>
+          </div>
+
+          <div className={styles.inputRow}>
             <input
-              type="radio"
-              checked={gender === 'Men'}
-              onChange={() => setGender('Men')}
+              type="text"
+              placeholder="Full name *"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
             />
-            Men
-          </label>
 
-          <label>
             <input
-              type="radio"
-              checked={gender === 'Women'}
-              onChange={() => setGender('Women')}
+              type="text"
+              placeholder="Phone"
+              value={phone}
+              onChange={(e) => setPhone(e.target.value)}
             />
-            Women
-          </label>
+          </div>
         </div>
 
-        {/* Họ tên & SĐT */}
-        <div className={styles.inputRow}>
-          <input
-            type="text"
-            placeholder="Full name *"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-          />
-
-          <input
-            type="text"
-            placeholder="Phone"
-            value={phone}
-            onChange={(e) => setPhone(e.target.value)}
-          />
-        </div>
-        </div>
-
-        {/* Nội dung bình luận */}
         <textarea
-          className={styles.textarea} 
+          className={styles.textarea}
           placeholder="Enter comment..."
           value={content}
           onChange={(e) => setContent(e.target.value)}
-        ></textarea>
+        />
 
-        <button type="submit" className={styles.submitBtn}>
-          Send Comment
-        </button>
+        <div className={styles.sendCommentButton}>
+          <button type="submit" className={styles.submitBtn}>
+            Send Comment
+          </button>
+        </div>
       </form>
 
       {/* HIỂN THỊ DANH SÁCH BÌNH LUẬN */}

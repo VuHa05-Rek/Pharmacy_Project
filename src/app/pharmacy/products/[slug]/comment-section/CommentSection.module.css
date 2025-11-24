@@ -18,10 +18,9 @@
 
 .genderGroup {
     display: flex;
-    direction: column;
-    gap: 40px;
     align-items: center;
-    margin-bottom: 20px;
+    gap: 20px;
+    padding-bottom: 20px;
 }
 
 .genderGroup label {
@@ -77,4 +76,28 @@
     border-color: #ea9f2f;
     box-shadow: 0 0 4px rgba(209, 154, 27, 0.5);
     outline: none;
+}
+
+.sendCommentButton {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 15px;
+    padding-right: 250px;
+    padding-top: 10px;
+    padding-bottom: 30px;
+}
+
+.submitBtn {
+    background: rgb(252, 149, 23);
+    width: 130px;
+    height: 35px;
+    border: 1.5px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+}
+
+.commentItem {
+    padding: 20px;
+    border: 1px solid #ddd;
 }
