@@ -1,7 +1,8 @@
 'use client';
 
 import { useState } from 'react';
-import styles from './CommentSection.module.css'; // nếu bạn có CSS module riêng
+import styles from './CommentSection.module.css'; 
+import reply from '../../../assets/reply.png';
 
 interface Comment {
   id: number;
@@ -116,11 +117,24 @@ export default function CommentSection({ slug }: { slug: string }) {
 
         {comments.map((cmt) => (
           <div key={cmt.id} className={styles.commentItem}>
-            <p className={styles.userName}>
-              {cmt.gender} {cmt.name}
+            <div className={styles.name_gender}>
+              <p className={styles.userName}>
+                <strong>Name: </strong>{cmt.name}
+              </p>
+
+              <p className ={styles.genderName}>
+                <strong>Gender: </strong>{cmt.gender}  
+              </p>
+            </div>
+
+            <p className={styles.content}>
+              <strong>Content: </strong>{cmt.content}
             </p>
-            <p className={styles.content}>{cmt.content}</p>
-            <p className={styles.time}>{cmt.createdAt}</p>
+
+            <p className={styles.time}>
+              <strong>Time: </strong>{cmt.createdAt}
+            </p>
+
           </div>
         ))}
       </div>
@@ -128,3 +142,4 @@ export default function CommentSection({ slug }: { slug: string }) {
     </div>
   );
 }
+

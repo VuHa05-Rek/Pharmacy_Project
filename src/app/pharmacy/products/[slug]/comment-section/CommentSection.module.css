@@ -58,7 +58,6 @@
     max-width: 900px;
     min-width: 500px;
     display: block;
-    /* để margin auto có tác dụng */
     margin: 0 auto 20px;
     /* căn giữa */
     min-height: 130px;
@@ -97,7 +96,37 @@
     color: white;
 }
 
+.noComment {
+    padding-left: 50px;
+    padding: 20px;
+    font-weight: 550;
+    font-size: 20px;
+}
+
 .commentItem {
     padding: 20px;
     border: 1px solid #ddd;
+}
+
+.name_gender {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 10px 0;
+}
+
+.userName {
+    font-size: 20px;
+    margin: 0;
+}
+
+.content {
+    padding: 20px;
+    border: 1px solid #ddd;
+}
+
+.time {
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
 }
