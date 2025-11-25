@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import styles from './CommentSection.module.css'; 
+import styles from './CommentSection.module.css';
 import reply from '../../../assets/reply.png';
 
 interface Comment {
@@ -14,8 +14,7 @@ interface Comment {
   createdAt: string;
 }
 
-
-// Đây là form mẫu để text và lưu trong RAM viết bằng Route Next JS còn thiếu Backend 
+// Đây là form mẫu để text và lưu trong RAM viết bằng Route Next JS còn thiếu Backend
 export default function CommentSection({ slug }: { slug: string }) {
   const [gender, setGender] = useState<'Men' | 'Women'>('Men');
   const [name, setName] = useState('');
@@ -53,93 +52,89 @@ export default function CommentSection({ slug }: { slug: string }) {
   return (
     <div className={styles.commentContainer}>
       <div className={styles.commentShadow}>
-      <h2 className={styles.title}>COMMENT</h2>
+        <h2 className={styles.title}>COMMENT</h2>
 
-      {/* FORM NHẬP BÌNH LUẬN */}
-      <form className={styles.form} onSubmit={handleSubmit}>
-        <div className={styles.totalInformation}>
-          <div className={styles.genderGroup}>
-            <label>
-              <input
-                type="radio"
-                checked={gender === 'Men'}
-                onChange={() => setGender('Men')}
-              />
-              Men
-            </label>
+        {/* FORM NHẬP BÌNH LUẬN */}
+        <form className={styles.form} onSubmit={handleSubmit}>
+          <div className={styles.totalInformation}>
+            <div className={styles.genderGroup}>
+              <label>
+                <input type="radio" checked={gender === 'Men'} onChange={() => setGender('Men')} />
+                Men
+              </label>
 
-            <label>
-              <input
-                type="radio"
-                checked={gender === 'Women'}
-                onChange={() => setGender('Women')}
-              />
-              Women
-            </label>
-          </div>
-
-          <div className={styles.inputRow}>
-            <input
-              type="text"
-              placeholder="Full name *"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-            />
-
-            <input
-              type="text"
-              placeholder="Phone"
-              value={phone}
-              onChange={(e) => setPhone(e.target.value)}
-            />
-          </div>
-        </div>
-
-        <textarea
-          className={styles.textarea}
-          placeholder="Enter comment..."
-          value={content}
-          onChange={(e) => setContent(e.target.value)}
-        />
-
-        <div className={styles.sendCommentButton}>
-          <button type="submit" className={styles.submitBtn}>
-            Send Comment
-          </button>
-        </div>
-      </form>
-
-      {/* HIỂN THỊ DANH SÁCH BÌNH LUẬN */}
-      <div className={styles.commentList}>
-        {comments.length === 0 && (
-          <p className={styles.noComment}>No comments yet.</p>
-        )}
-
-        {comments.map((cmt) => (
-          <div key={cmt.id} className={styles.commentItem}>
-            <div className={styles.name_gender}>
-              <p className={styles.userName}>
-                <strong>Name: </strong>{cmt.name}
-              </p>
-
-              <p className ={styles.genderName}>
-                <strong>Gender: </strong>{cmt.gender}  
-              </p>
+              <label>
+                <input
+                  type="radio"
+                  checked={gender === 'Women'}
+                  onChange={() => setGender('Women')}
+                />
+                Women
+              </label>
             </div>
 
-            <p className={styles.content}>
-              <strong>Content: </strong>{cmt.content}
-            </p>
+            <div className={styles.inputRow}>
+              <input
+                type="text"
+                placeholder="Full name *"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+              />
 
-            <p className={styles.time}>
-              <strong>Time: </strong>{cmt.createdAt}
-            </p>
-
+              <input
+                type="text"
+                placeholder="Phone"
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
+              />
+            </div>
           </div>
-        ))}
-      </div>
+
+          <textarea
+            className={styles.textarea}
+            placeholder="Enter comment..."
+            value={content}
+            onChange={(e) => setContent(e.target.value)}
+          />
+
+          <div className={styles.sendCommentButton}>
+            <button type="submit" className={styles.submitBtn}>
+              Send Comment
+            </button>
+          </div>
+        </form>
+
+        {/* HIỂN THỊ DANH SÁCH BÌNH LUẬN */}
+        <div className={styles.commentList}>
+          {comments.length === 0 && <p className={styles.noComment}>No comments yet.</p>}
+
+          {comments.map((cmt) => (
+            <div key={cmt.id} className={styles.commentItem}>
+              <div className={styles.name_gender}>
+                <p className={styles.userName}>
+                  <strong>Name: </strong>
+                  {cmt.name}
+                </p>
+
+                <p className={styles.genderName}>
+                  <strong>Gender: </strong>
+                  {cmt.gender}
+                </p>
+              </div>
+
+              <p className={styles.content}>
+                <strong>Content: </strong>
+                {cmt.content}
+              </p>
+
+              <p className={styles.time}>
+                <strong>Time: </strong>
+                {cmt.createdAt}
+              </p>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
 }
-
