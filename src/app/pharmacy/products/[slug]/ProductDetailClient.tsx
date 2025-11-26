@@ -21,6 +21,8 @@ interface ProductDetailProps {
     placeOfManufacture: string;
     uses?: string;
     outstanding?: string;
+    category?: string;
+    packaging?: string;
   };
 }
 

@@ -1,59 +1,59 @@
 .productItem {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 10px;
-    background: rgb(238, 238, 238);
-    border-radius: 8px;
-    transition: transform 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+  background: rgb(238, 238, 238);
+  border-radius: 8px;
+  transition: transform 0.2s ease;
 }
 
 .backgroundImage {
-    position: relative;
-    width: 160px;
-    height: 160px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 10px;
+  position: relative;
+  width: 160px;
+  height: 160px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
 }
 
 .title {
-    font-size: 14px;
-    font-weight: 600;
-    color: #333;
-    margin: 8px 0;
-    line-height: 1.3;
-    max-height: 2.6em;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  margin: 8px 0;
+  line-height: 1.3;
+  max-height: 2.6em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
 }
 
 .price {
-    color: #000000;
-    font-weight: 700;
-    font-size: 16px;
-    margin: 4px 0 8px;
+  color: #000000;
+  font-weight: 700;
+  font-size: 16px;
+  margin: 4px 0 8px;
 }
 
 .addToCart {
-    width: 100%;
-    padding: 8px;
-    background-color: orange;
-    color: #333;
-    border: 1px solid #ff9500;
-    border-radius: 4px;
-    cursor: pointer;
-    font-weight: 600;
-    transition: all 0.2s ease;
+  width: 100%;
+  padding: 8px;
+  background-color: orange;
+  color: #333;
+  border: 1px solid #ff9500;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s ease;
 }
 
 .addToCart:hover {
-    background-color: #ff9500;
-    border-color: #e37c1c;
-    color: white;
+  background-color: #ff9500;
+  border-color: #e37c1c;
+  color: white;
 }
