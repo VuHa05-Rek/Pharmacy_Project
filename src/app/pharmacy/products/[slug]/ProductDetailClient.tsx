@@ -72,7 +72,7 @@ export default function ProductDetailClient({ product }: ProductDetailProps) {
 
           <div className={styles.quantityContainer}>
             <div className={styles.select}>
-              <p className={styles.selectLabel}>Chọn số lượng</p>{' '}
+              <p className={styles.selectLabel}>Select Quantity</p>{' '}
               {/* Đổi từ Select Quantity sang tiếng Việt */}
             </div>
             <div className={styles.quantityInput}>

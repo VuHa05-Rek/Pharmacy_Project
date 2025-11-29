@@ -19,14 +19,6 @@ interface ProductProps {
   prefix: string; //thêm prefix
 }
 
-// const products: Product[] = [
-//   { id: 1, image: Medicine, title: 'Vitamin C', price: '15.000đ' },
-//   { id: 2, image: Medicine, title: 'Vitamin C', price: '15.000đ' },
-//   { id: 3, image: Medicine, title: 'Vitamin C', price: '15.000đ' },
-//   { id: 4, image: Medicine, title: 'Vitamin C', price: '15.000đ' },
-//   { id: 5, image: Medicine, title: 'Vitamin C', price: '15.000đ' },
-// ];
-
 const product_1 = products.filter((product) => product.category === 'product_1');
 
 const Product_1: React.FC<ProductProps> = React.memo(({ prefix }) => {
